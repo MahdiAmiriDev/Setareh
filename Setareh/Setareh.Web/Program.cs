@@ -1,7 +1,21 @@
+using Microsoft.EntityFrameworkCore;
+using Setareh.DAL.Context;
+using Setareh.Web.ServiceConfiguration;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.RegisterServices();
+
+#region ConfigDbContext
+
+builder.Services.AddDbContext<Context>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("SetarehConnectinString"));
+});
+
+#endregion
 
 var app = builder.Build();
 
