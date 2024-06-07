@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Setareh.Web.props" />
+</Project>

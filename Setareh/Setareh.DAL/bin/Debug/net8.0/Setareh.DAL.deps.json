@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Setareh.DAL/1.0.0": {
+        "runtime": {
+          "Setareh.DAL.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Setareh.DAL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

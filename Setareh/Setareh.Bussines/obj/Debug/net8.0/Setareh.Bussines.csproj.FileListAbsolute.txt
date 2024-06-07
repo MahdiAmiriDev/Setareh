@@ -1,0 +1,16 @@
+E:\Projects\Setareh\Setareh\Setareh.Bussines\bin\Debug\net8.0\Setareh.Bussines.deps.json
+E:\Projects\Setareh\Setareh\Setareh.Bussines\bin\Debug\net8.0\Setareh.Bussines.dll
+E:\Projects\Setareh\Setareh\Setareh.Bussines\bin\Debug\net8.0\Setareh.Bussines.pdb
+E:\Projects\Setareh\Setareh\Setareh.Bussines\bin\Debug\net8.0\Setareh.DAL.dll
+E:\Projects\Setareh\Setareh\Setareh.Bussines\bin\Debug\net8.0\Setareh.DAL.pdb
+E:\Projects\Setareh\Setareh\Setareh.Bussines\obj\Debug\net8.0\Setareh.Bussines.csproj.AssemblyReference.cache
+E:\Projects\Setareh\Setareh\Setareh.Bussines\obj\Debug\net8.0\Setareh.Bussines.GeneratedMSBuildEditorConfig.editorconfig
+E:\Projects\Setareh\Setareh\Setareh.Bussines\obj\Debug\net8.0\Setareh.Bussines.AssemblyInfoInputs.cache
+E:\Projects\Setareh\Setareh\Setareh.Bussines\obj\Debug\net8.0\Setareh.Bussines.AssemblyInfo.cs
+E:\Projects\Setareh\Setareh\Setareh.Bussines\obj\Debug\net8.0\Setareh.Bussines.csproj.CoreCompileInputs.cache
+E:\Projects\Setareh\Setareh\Setareh.Bussines\obj\Debug\net8.0\Setareh.Bussines.sourcelink.json
+E:\Projects\Setareh\Setareh\Setareh.Bussines\obj\Debug\net8.0\Setareh..94AD25B7.Up2Date
+E:\Projects\Setareh\Setareh\Setareh.Bussines\obj\Debug\net8.0\Setareh.Bussines.dll
+E:\Projects\Setareh\Setareh\Setareh.Bussines\obj\Debug\net8.0\refint\Setareh.Bussines.dll
+E:\Projects\Setareh\Setareh\Setareh.Bussines\obj\Debug\net8.0\Setareh.Bussines.pdb
+E:\Projects\Setareh\Setareh\Setareh.Bussines\obj\Debug\net8.0\ref\Setareh.Bussines.dll

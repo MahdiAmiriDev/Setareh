@@ -1,0 +1,50 @@
+﻿
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="utf-8" />
+    <title>مهدی امیری | @ViewData["Title"]</title>
+
+    <partial name="_MetaTagsPartial"></partial>
+
+    <partial name="_HeaderReferencesPartial"></partial>
+    @await RenderSectionAsync("styles",false)
+
+</head>
+<body>
+
+    <partial name="_LoaderPartial"></partial>
+
+    <main class="main">
+
+        <partial name="_TopHeaderPartial"></partial>
+
+        <div class="container gutter-top">
+
+            @await Component.InvokeAsync("Header")
+
+            <div class="row sticky-parent">
+
+                <partial name="_SidebarPartial"></partial>
+
+                <!-- Content -->
+                <div class="col-12 col-md-12 col-lg-10">
+
+                    @RenderBody()
+
+                    <partial name="_FooterPartial"></partial>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <div class="back-to-top"></div>
+
+    <partial name="_SiteToolsPartial"></partial>
+
+    <partial name="_FooterReferencesPartial"></partial>
+    @await RenderSectionAsync("scripts", false)
+
+</body>
+</html>
