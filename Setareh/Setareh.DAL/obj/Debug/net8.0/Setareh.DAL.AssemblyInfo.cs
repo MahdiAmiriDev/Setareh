@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Setareh.DAL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2120069869559a815ce65176a5c2afd54f2136d0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b47fa87dc5bf53b25204e2373009e2e894c7415a")]
 [assembly: System.Reflection.AssemblyProductAttribute("Setareh.DAL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Setareh.DAL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
