@@ -4,11 +4,11 @@ using Setareh.DAL.Entities.User;
 
 namespace Setareh.DAL.Context
 {
-    public class Context:DbContext
+    public class SetarehContext:DbContext
     {
         #region Constractor
 
-        public Context(DbContextOptions<Context> options):base(options)
+        public SetarehContext(DbContextOptions<SetarehContext> options):base(options)
         {
             
         }

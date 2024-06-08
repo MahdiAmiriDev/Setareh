@@ -10,7 +10,7 @@ builder.Services.RegisterServices();
 
 #region ConfigDbContext
 
-builder.Services.AddDbContext<Context>(options =>
+builder.Services.AddDbContext<SetarehContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("SetarehConnectinString"));
 });
