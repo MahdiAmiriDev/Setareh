@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Setareh.Bussines.Services.Interface;
+using Setareh.DAL.Entities.User;
 using Setareh.DAL.ViewModels;
 
 namespace Setareh.Web.Areas.Admin.Controllers
@@ -45,6 +46,15 @@ namespace Setareh.Web.Areas.Admin.Controllers
             if (!ModelState.IsValid)
                 return View(model);
 
+            var result = await _userService.CreateUserAsync(model);
+
+            switch (result)
+            {
+                case CreateUserResult.Success:
+                    break;
+                case CreateUserResult.Error:
+                    break;
+            }
 
             return View();
         }
@@ -55,6 +65,13 @@ namespace Setareh.Web.Areas.Admin.Controllers
 
         public async Task<IActionResult> Update(int id)
         {
+            var user = await _userService.GetForEditByIdAsync(id);
+
+            if (user == null)
+                return NotFound();
+
+            
+
             return View();
         }
 
@@ -63,6 +80,23 @@ namespace Setareh.Web.Areas.Admin.Controllers
         {
             if (!ModelState.IsValid)
                 return View(model);
+
+
+            var result = await _userService.UpdateAsync(model);
+
+            switch (result)
+            {
+                case EditUserResult.Success:
+                    break;
+                case EditUserResult.Error:
+                    break;
+                case EditUserResult.UserNotFound:
+                    break;
+                case EditUserResult.EmailDuplicated:
+                    break;
+                case EditUserResult.MobileDuplicated:
+                    break;
+            }
 
 
             return View();

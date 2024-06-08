@@ -8,5 +8,9 @@ namespace Setareh.Bussines.Services.Interface
 
         Task<CreateUserResult> CreateUserAsync(CreateUserModel model);
 
+        Task<UserEditModel> GetForEditByIdAsync(int id);
+
+        Task<EditUserResult> UpdateAsync(UserEditModel model);
+
     }
 }

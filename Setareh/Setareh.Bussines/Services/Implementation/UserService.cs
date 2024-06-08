@@ -20,7 +20,7 @@ namespace Setareh.Bussines.Services.Implementation
             User user = new()
             {
                 CreateDate = DateTime.Now,
-                Email = model.Email,
+                Email = model.Email.Trim().ToLower(),
                 FirstName = model.FirstName,
                 LastName = model.LastName,
                 Mobile = model.Mobile,
@@ -32,6 +32,49 @@ namespace Setareh.Bussines.Services.Implementation
             await _userRepository.SaveAsync();
 
             return CreateUserResult.Success;
+        }
+
+        public async Task<UserEditModel> GetForEditByIdAsync(int id)
+        {
+            var user = await _userRepository.GetByIdAsync(id);
+
+            if (user == null)
+                return null;
+
+            return new UserEditModel
+            {
+                Email = user.Email,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                Mobile = user.Mobile,
+                Id = user.Id,
+                IsActive = user.IsActive
+            };
+
+        }
+
+        public async Task<EditUserResult> UpdateAsync(UserEditModel model)
+        {
+            var user = await _userRepository.GetByIdAsync(model.Id);
+
+            if (user == null)
+                return EditUserResult.UserNotFound;
+
+            if(await _userRepository.DuplicatedEmail(user.Id,model.Email.Trim().ToLower()))
+                return EditUserResult.EmailDuplicated;
+
+            if (await _userRepository.DuplicatedMobile(user.Id, model.Mobile))
+                return EditUserResult.MobileDuplicated;
+
+            user.IsActive = model.IsActive;
+            user.Email = model.Email;   
+            user.FirstName = model.FirstName;
+            user.LastName = model.LastName;
+            user.Mobile = model.Mobile;
+            
+            _userRepository.Update(user);
+            await _userRepository.SaveAsync();
+            return EditUserResult.Success;
         }
     }
 }

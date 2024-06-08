@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Setareh.Bussines")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+88e04e7fa448ab7e592ad2f3437157710e592e3d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+97b8a6206b7ee6c57a85a6a3621322623f19bb2d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Setareh.Bussines")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Setareh.Bussines")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
