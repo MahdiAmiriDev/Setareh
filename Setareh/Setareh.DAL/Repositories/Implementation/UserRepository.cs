@@ -4,7 +4,7 @@ using Setareh.DAL.Entities.User;
 using Setareh.DAL.Repositories.Interface;
 using Setareh.DAL.Context;
 using Microsoft.EntityFrameworkCore;
-using System.Reflection;
+using Setareh.DAL.ViewModels;
 
 namespace Setareh.DAL.Repositories.Implementation
 {
@@ -24,17 +24,41 @@ namespace Setareh.DAL.Repositories.Implementation
 
         public async Task<bool> DuplicatedMobile(int id, string mobile)
         {
-            return await _context.User.AnyAsync(user => user.Mobile ==  mobile && user.Id != id);
+            return await _context.User.AnyAsync(user => user.Mobile == mobile && user.Id != id);
+        }
+
+        public async Task<UserFilterViewModel> FilterAsync(UserFilterViewModel model)
+        {
+            var query = _context.User.AsQueryable();
+
+            if (!string.IsNullOrEmpty(model.Email))
+                query = query.Where(user => user.Email == model.Email);
+
+            if (!string.IsNullOrEmpty(model.Mobile))
+                query = query.Where(user => user.Mobile == model.Mobile);
+
+            await model.Paging(query.Select(user => new UserDetailViewModel()
+            {
+                Mobile = user.Mobile,
+                CreateDate = user.CreateDate,
+                FirstName = user.FirstName,
+                Id = user.Id,
+                Email = user.Email,
+                IsActive = user.IsActive,
+                LastName = user.LastName
+            }));
+
+            return model;
         }
 
         public async Task<User> GetByIdAsync(int id)
         {
-            return await _context.User.FirstOrDefaultAsync(user => user.Id == id);            
+            return await _context.User.FirstOrDefaultAsync(user => user.Id == id);
         }
 
         public async Task InsertAsync(User user)
         {
-            await _context.User.AddAsync(user);            
+            await _context.User.AddAsync(user);
         }
 
         public async Task SaveAsync()

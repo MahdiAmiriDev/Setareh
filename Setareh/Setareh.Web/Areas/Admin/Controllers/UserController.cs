@@ -26,9 +26,10 @@ namespace Setareh.Web.Areas.Admin.Controllers
 
         #region List
 
-        public Task<IActionResult> List()
+        public async Task<IActionResult> List(UserFilterViewModel filter)
         {
-            return View();
+            var result = await _userService.FilterAsync(filter);
+            return View(result);
         }
 
         #endregion

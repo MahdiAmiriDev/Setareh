@@ -12,5 +12,7 @@ namespace Setareh.Bussines.Services.Interface
 
         Task<EditUserResult> UpdateAsync(UserEditModel model);
 
+        Task<UserFilterViewModel> FilterAsync(UserFilterViewModel model);
+
     }
 }

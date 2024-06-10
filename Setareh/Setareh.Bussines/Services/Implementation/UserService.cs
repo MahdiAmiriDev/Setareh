@@ -34,6 +34,11 @@ namespace Setareh.Bussines.Services.Implementation
             return CreateUserResult.Success;
         }
 
+        public async Task<UserFilterViewModel> FilterAsync(UserFilterViewModel model)
+        {
+            return await _userRepository.FilterAsync(model);
+        }
+
         public async Task<UserEditModel> GetForEditByIdAsync(int id)
         {
             var user = await _userRepository.GetByIdAsync(id);

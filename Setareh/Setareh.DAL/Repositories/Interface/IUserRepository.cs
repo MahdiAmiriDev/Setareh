@@ -1,6 +1,7 @@
 ﻿
 
 using Setareh.DAL.Entities.User;
+using Setareh.DAL.ViewModels;
 
 namespace Setareh.DAL.Repositories.Interface
 {
@@ -16,5 +17,7 @@ namespace Setareh.DAL.Repositories.Interface
         Task<bool> DuplicatedMobile(int id , string mobile);
 
         void Update(User user);
+
+        Task<UserFilterViewModel> FilterAsync(UserFilterViewModel model);
     }
 }
