@@ -1,5 +1,7 @@
 ﻿
+using Setareh.Bussines.Security;
 using Setareh.Bussines.Services.Interface;
+using Setareh.DAL.Entities.Account;
 using Setareh.DAL.Entities.User;
 using Setareh.DAL.Repositories.Interface;
 using Setareh.DAL.ViewModels;
@@ -24,7 +26,7 @@ namespace Setareh.Bussines.Services.Implementation
                 FirstName = model.FirstName,
                 LastName = model.LastName,
                 Mobile = model.Mobile,
-                Password = model.Password,
+                Password = model.Password.Trim().EncodePasswordMd5(),
                 IsActive = model.IsActive
             };
 
@@ -37,6 +39,11 @@ namespace Setareh.Bussines.Services.Implementation
         public async Task<UserFilterViewModel> FilterAsync(UserFilterViewModel model)
         {
             return await _userRepository.FilterAsync(model);
+        }
+
+        public async Task<User> GetByEmailAsync(string email)
+        {
+            return await _userRepository.GetByEmailAsync(email.Trim().ToLower());
         }
 
         public async Task<UserEditModel> GetForEditByIdAsync(int id)
@@ -55,6 +62,45 @@ namespace Setareh.Bussines.Services.Implementation
                 Id = user.Id,
                 IsActive = user.IsActive
             };
+
+        }
+
+		public async Task<UserDetailViewModel> GetUserInformationAsync(int userId)
+		{
+			var user = await _userRepository.GetByIdAsync(userId);
+
+            if (user == null)
+                return null;
+
+            return new UserDetailViewModel
+            {
+                CreateDate = user.CreateDate,
+                Email = user.Email,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                Mobile = user.Mobile,
+                IsActive = user.IsActive,
+                Id = user.Id
+            };
+
+
+		}
+
+		public async Task<LoginResult> LoginAsync(LoginViewModel model)
+        {
+            model.Email = model.Email.Trim().ToLower();
+
+            var user = await _userRepository.GetByEmailAsync(model.Email);
+
+            if(user == null)
+                return LoginResult.UserNotFound;
+
+            string hashPassword = model.Password.Trim().EncodePasswordMd5();
+
+            if (user.Password != hashPassword)
+                return LoginResult.UserNotFound;
+
+            return LoginResult.Success;
 
         }
 

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fN1KUbc1qrdsv2MuOa2hHmwNjvl9VzP9kI8EVA8dLHw=",
+  "Hash": "NcdVh2iXAQmI2T57udmf+mgOtqcuJFLrYXe9DmSyQ0Q=",
   "Source": "Setareh.Web",
   "BasePath": "_content/Setareh.Web",
   "Mode": "Default",
@@ -3036,6 +3036,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Admin\\assets\\js\\admin.js"
+    },
+    {
+      "Identity": "E:\\Projects\\Setareh\\Setareh\\Setareh.Web\\wwwroot\\Admin\\assets\\js\\adminCustom.js",
+      "SourceId": "Setareh.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Projects\\Setareh\\Setareh\\Setareh.Web\\wwwroot\\",
+      "BasePath": "_content/Setareh.Web",
+      "RelativePath": "Admin/assets/js/adminCustom.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Admin\\assets\\js\\adminCustom.js"
     },
     {
       "Identity": "E:\\Projects\\Setareh\\Setareh\\Setareh.Web\\wwwroot\\Admin\\assets\\js\\app.min.js",

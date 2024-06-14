@@ -633,6 +633,10 @@
       "PackagePath": "staticwebassets\\Admin\\assets\\js\\admin.js"
     },
     {
+      "Id": "E:\\Projects\\Setareh\\Setareh\\Setareh.Web\\wwwroot\\Admin\\assets\\js\\adminCustom.js",
+      "PackagePath": "staticwebassets\\Admin\\assets\\js\\adminCustom.js"
+    },
+    {
       "Id": "E:\\Projects\\Setareh\\Setareh\\Setareh.Web\\wwwroot\\Admin\\assets\\js\\app.min.js",
       "PackagePath": "staticwebassets\\Admin\\assets\\js\\app.min.js"
     },

@@ -5,14 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Setareh.DAL.Common
+namespace Setareh.DAL.Models.Common
 {
     public class BasePaging<T>
     {
         public BasePaging()
         {
             Page = 1;
-            TakeEntity = 10; 
+            TakeEntity = 10;
             HowManyPageShowAfterAndBefore = 5;
             Entities = new List<T>();
         }
@@ -59,7 +59,7 @@ namespace Setareh.DAL.Common
                 pageCount = Convert.ToInt32(Math.Ceiling(allEntitiesCount / (double)TakeEntity));
             }
             catch (Exception)
-            {                
+            {
             }
 
             Page = Page > pageCount ? pageCount : Page;
@@ -71,7 +71,7 @@ namespace Setareh.DAL.Common
             EndPage = Page + HowManyPageShowAfterAndBefore > pageCount ? pageCount : Page + HowManyPageShowAfterAndBefore;
             PageCount = pageCount;
             Entities = await Task.Run(() => query.Skip(SkipEntity).Take(TakeEntity).ToList());
-            
+
             return this;
         }
     }

@@ -10,3 +10,6 @@ E:\Projects\Setareh\Setareh\Setareh.DAL\obj\Debug\net8.0\Setareh.DAL.dll
 E:\Projects\Setareh\Setareh\Setareh.DAL\obj\Debug\net8.0\refint\Setareh.DAL.dll
 E:\Projects\Setareh\Setareh\Setareh.DAL\obj\Debug\net8.0\Setareh.DAL.pdb
 E:\Projects\Setareh\Setareh\Setareh.DAL\obj\Debug\net8.0\ref\Setareh.DAL.dll
+E:\Projects\Setareh\Setareh\Setareh.DAL\obj\Debug\net8.0\Setareh.DAL.csproj.AssemblyReference.cache
+E:\Projects\Setareh\Setareh\Setareh.DAL\bin\Debug\net8.0\Setareh.DAL.runtimeconfig.json
+E:\Projects\Setareh\Setareh\Setareh.DAL\obj\Debug\net8.0\Setareh.DAL.genruntimeconfig.cache

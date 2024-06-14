@@ -12,6 +12,7 @@ namespace Setareh.Web.ServiceConfiguration
             #region Repositories
 
             services.AddScoped<IUserRepository,UserRepository>();
+            services.AddScoped<IContactUsRepository,ContactUsRepository>();
 
             #endregion
 
@@ -19,6 +20,7 @@ namespace Setareh.Web.ServiceConfiguration
             #region Services
 
             services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IContactUsService, ContactUsService>();
 
             #endregion
         }

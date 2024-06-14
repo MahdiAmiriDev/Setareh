@@ -19,5 +19,7 @@ namespace Setareh.DAL.Repositories.Interface
         void Update(User user);
 
         Task<UserFilterViewModel> FilterAsync(UserFilterViewModel model);
+
+        Task<User> GetByEmailAsync(string email);
     }
 }

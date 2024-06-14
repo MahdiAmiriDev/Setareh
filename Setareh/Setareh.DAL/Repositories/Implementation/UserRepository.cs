@@ -32,10 +32,10 @@ namespace Setareh.DAL.Repositories.Implementation
             var query = _context.User.AsQueryable();
 
             if (!string.IsNullOrEmpty(model.Email))
-                query = query.Where(user => user.Email == model.Email);
+                query = query.Where(user => EF.Functions.Like(user.Email,$"%{model.Email}%"));
 
             if (!string.IsNullOrEmpty(model.Mobile))
-                query = query.Where(user => user.Mobile == model.Mobile);
+                query = query.Where(user => EF.Functions.Like(user.Mobile, $"%{model.Mobile}%"));
 
             await model.Paging(query.Select(user => new UserDetailViewModel()
             {
@@ -49,6 +49,12 @@ namespace Setareh.DAL.Repositories.Implementation
             }));
 
             return model;
+        }
+
+        public async Task<User> GetByEmailAsync(string email)
+        {
+            return await _context.User
+                .FirstOrDefaultAsync(user => user.Email == email);
         }
 
         public async Task<User> GetByIdAsync(int id)

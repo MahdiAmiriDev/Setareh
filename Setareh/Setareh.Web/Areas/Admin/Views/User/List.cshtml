@@ -17,7 +17,7 @@
             </div>
             <div class="body">
                 <form method="get" asp-action="List" id="filter-search">
-                    <input type="hidden" asp-for="Page"/>
+                    <input type="hidden" asp-for="Page" />
                     <div class="row clearfix">
                         <div class="col-sm-12 col-md-4">
                             <div class="form-group form-float">
@@ -54,7 +54,8 @@
 
             </div>
             <div class="body table-responsive">
-                @if(Model != null && Model.Entities != null && Model.Entities.Any()){
+                @if (Model != null && Model.Entities != null && Model.Entities.Any())
+                {
                     <table class="table">
                         <thead>
                             <tr>
@@ -89,16 +90,21 @@
 
                                     </td>
                                     <td>@user.CreateDate</td>
-                                    <td></td>
+                                    <td>
+                                  <a asp-action="Update" class="text-warning" asp-route-id="@user.Id">
+                                            <i class="fa fa-pen"></i>
+                                        </a>
+                                    </td>
                                 </tr>
                             }
                         </tbody>
                     </table>
+                    <partial name="_AdminPaginationPartial" model="@Model.GetCurrentPaging()" />
                 }
                 else
                 {
                     <partial name="_AdminNotFoundPartial"></partial>
-                }                
+                }
             </div>
         </div>
     </div>

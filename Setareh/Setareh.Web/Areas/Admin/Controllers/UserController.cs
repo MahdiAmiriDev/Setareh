@@ -5,7 +5,7 @@ using Setareh.DAL.ViewModels;
 
 namespace Setareh.Web.Areas.Admin.Controllers
 {
-    public class UserController : Controller
+    public class UserController : AdminBaseController
     {
         #region Fields
 
@@ -52,12 +52,14 @@ namespace Setareh.Web.Areas.Admin.Controllers
             switch (result)
             {
                 case CreateUserResult.Success:
-                    break;
+                    TempData[SuccessMessage] = "کاربر جدید با موفقیت افزوده شد.";
+                    return RedirectToAction("List");                     
                 case CreateUserResult.Error:
+                    TempData[ErrorMessage] = "کاربر گرامی در طول انجام فرآیند خطایی رخ داده است";
                     break;
             }
 
-            return View();
+            return View(model);
         }
 
         #endregion
@@ -73,7 +75,7 @@ namespace Setareh.Web.Areas.Admin.Controllers
 
             
 
-            return View();
+            return View(user);
         }
 
         [HttpPost]
@@ -88,19 +90,24 @@ namespace Setareh.Web.Areas.Admin.Controllers
             switch (result)
             {
                 case EditUserResult.Success:
-                    break;
+                    TempData[SuccessMessage] = "کاربر جدید با موفقیت ویرایش شد.";
+                    return RedirectToAction("List");
                 case EditUserResult.Error:
+                    TempData[ErrorMessage] = "کاربر گرامی در طول انجام فرآیند خطایی رخ داده است";
                     break;
                 case EditUserResult.UserNotFound:
+                    TempData[ErrorMessage] = "کاربر موردنظز پیدا نشد";
                     break;
                 case EditUserResult.EmailDuplicated:
+                    TempData[ErrorMessage] = "بروز خطا ایمیل تکراری است";
                     break;
                 case EditUserResult.MobileDuplicated:
+                    TempData[ErrorMessage] = "بروز خطا شماره موبایل تکراری است";
                     break;
             }
 
 
-            return View();
+            return View(model);
         }
 
         #endregion

@@ -1,4 +1,5 @@
-﻿
+﻿using Setareh.DAL.Entities.Account;
+using Setareh.DAL.Entities.User;
 using Setareh.DAL.ViewModels;
 
 namespace Setareh.Bussines.Services.Interface
@@ -13,6 +14,12 @@ namespace Setareh.Bussines.Services.Interface
         Task<EditUserResult> UpdateAsync(UserEditModel model);
 
         Task<UserFilterViewModel> FilterAsync(UserFilterViewModel model);
+
+        Task<LoginResult> LoginAsync(LoginViewModel model);
+
+        Task<User> GetByEmailAsync(string email);
+
+        Task<UserDetailViewModel> GetUserInformationAsync(int userId);
 
     }
 }

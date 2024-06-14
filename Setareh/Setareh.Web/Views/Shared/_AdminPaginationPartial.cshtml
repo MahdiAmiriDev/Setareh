@@ -1,9 +1,10 @@
-﻿@using Setareh.DAL.Common
+﻿@using Setareh.DAL.Models.Common
+
 @model PagingViewModel
 
 
 <div class="row">
-    <div class="dataTables_paginate paging_simple_numbers" id="tableGroup_paginate">
+    <div class="dataTables_paginate d-flex justify-content-center paging_simple_numbers" id="tableGroup_paginate">
         <ul class="pagination">
             @for(int i = Model.StartPage; i <= Model.EndPage; i++)
             {

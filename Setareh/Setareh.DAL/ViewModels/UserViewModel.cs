@@ -1,6 +1,4 @@
-﻿
-
-using Setareh.DAL.Common;
+﻿using Setareh.DAL.Models.Common;
 using System.ComponentModel.DataAnnotations;
 
 namespace Setareh.DAL.ViewModels
