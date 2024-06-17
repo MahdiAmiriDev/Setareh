@@ -38,9 +38,26 @@ namespace Setareh.Bussines.Services.Implementation
             return await _contactUsRepository.FilterAsync(model);
         }
 
-		public async Task<ContactUsDetailViewModel?> GetByIdAsync(int id)
-		{
-            return await _contactUsRepository.GetByIdAsync(id);
-		}
-	}
+        public async Task<ContactUsDetailViewModel?> GetInfoByIdAsync(int id)
+        {
+            return await _contactUsRepository.GetInfoByIdAsync(id);
+        }
+
+        public async Task<AnswerResult> AnswerAsync(ContactUsDetailViewModel model)
+        {
+            var contactUs = await _contactUsRepository.GetByIdAsync(model.Id);
+
+            if (contactUs == null)
+                return AnswerResult.ContactUsNotFound;
+
+            if(string.IsNullOrEmpty(contactUs.Answer))
+                return AnswerResult.AnswerIsNull;
+
+            contactUs.Answer = model.Answer;
+            _contactUsRepository.Update(contactUs);
+            await _contactUsRepository.SaveAsync();
+            return AnswerResult.Success;
+        }
+
+    }
 }

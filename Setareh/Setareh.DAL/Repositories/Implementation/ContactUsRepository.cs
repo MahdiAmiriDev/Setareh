@@ -23,19 +23,16 @@ namespace Setareh.DAL.Repositories.Implementation
         {
             var query = _context.ContactUs.AsQueryable();
 
-            if (string.IsNullOrEmpty(model.FirstName))
+            if (!string.IsNullOrEmpty(model.FirstName))
                 query = query.Where(cu => EF.Functions.Like(cu.FirstName, $"%{model.FirstName}%"));
 
-            if (string.IsNullOrEmpty(model.LastName))
-                query = query.Where(cu => EF.Functions.Like(cu.LastName, $"%{model.LastName}%"));
-
-            if (string.IsNullOrEmpty(model.Email))
+            if (!string.IsNullOrEmpty(model.Email))
                 query = query.Where(cu => EF.Functions.Like(cu.Email, $"%{model.Email}%"));
 
-            if (string.IsNullOrEmpty(model.Mobile))
+            if (!string.IsNullOrEmpty(model.Mobile))
                 query = query.Where(cu => EF.Functions.Like(cu.Mobile, $"%{model.Mobile}%"));
 
-            if (string.IsNullOrEmpty(model.Title))
+            if (!string.IsNullOrEmpty(model.Title))
                 query = query.Where(cu => EF.Functions.Like(cu.Title, $"%{model.Title}%"));
 
             switch (model.AnswerStatus)
@@ -50,6 +47,8 @@ namespace Setareh.DAL.Repositories.Implementation
                     break;
             }
 
+            query = query.OrderByDescending(contactUs => contactUs.CreateDate);
+
             await model.Paging(query.Select(cu => new ContactUsDetailViewModel
             {
                 Answer = cu.Answer,
@@ -60,13 +59,18 @@ namespace Setareh.DAL.Repositories.Implementation
                 LastName = cu.LastName,
                 Mobile = cu.Mobile,
                 Title = cu.Title,
-                CreateDate = cu.CreateDate,
+                CreateDate = cu.CreateDate,               
             }));
 
             return model;
         }
 
-		public async Task<ContactUsDetailViewModel?> GetByIdAsync(int id)
+        public async Task<ContactUs?> GetByIdAsync(int id)
+        {
+            return await _context.ContactUs.FirstOrDefaultAsync(c => c.Id == id);
+        }
+
+        public async Task<ContactUsDetailViewModel?> GetInfoByIdAsync(int id)
 		{
           return await _context.ContactUs
                 .Select(cu => new ContactUsDetailViewModel
@@ -91,6 +95,11 @@ namespace Setareh.DAL.Repositories.Implementation
         public async Task SaveAsync()
         {
             await _context.SaveChangesAsync();
+        }
+
+        public void Update(ContactUs contactUs)
+        {
+            _context.ContactUs.Update(contactUs);            
         }
     }
 }

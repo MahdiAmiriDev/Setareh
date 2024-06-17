@@ -113,7 +113,7 @@
                                     <td>@item.Mobile</td>
                                     <td>@item.Email</td>
                                     <td>@item.Title</td>
-                                    <td>@item.CreateDate</td>
+                                    <td>@item.CreateDate.ToShamsi()</td>
                                     <td>
                                         <a asp-action="Details" class="text-info" asp-route-id="@item.Id">
                                             <i class="fa fa-eye"></i>

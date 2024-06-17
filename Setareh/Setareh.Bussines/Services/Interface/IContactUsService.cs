@@ -1,4 +1,5 @@
-﻿using Setareh.DAL.ViewModels;
+﻿using Setareh.DAL.Entities.ContacUs;
+using Setareh.DAL.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,9 @@ namespace Setareh.Bussines.Services.Interface
 
         Task<FilterContactUsViewModel> FilterAsync(FilterContactUsViewModel model);
 
-        Task<ContactUsDetailViewModel?> GetByIdAsync(int id);
+        Task<ContactUsDetailViewModel?> GetInfoByIdAsync(int id);
+
+        Task<AnswerResult> AnswerAsync(ContactUsDetailViewModel model);
 
     }
 }

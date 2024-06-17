@@ -16,6 +16,8 @@ namespace Setareh.DAL.Repositories.Interface
 
         Task<FilterContactUsViewModel> FilterAsync(FilterContactUsViewModel model);
 
-        Task<ContactUsDetailViewModel?> GetByIdAsync(int id);
+        Task<ContactUsDetailViewModel?> GetInfoByIdAsync(int id);
+        Task<ContactUs?> GetByIdAsync(int id);
+        void Update(ContactUs contactUs);
     }
 }

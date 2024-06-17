@@ -35,9 +35,6 @@ namespace Setareh.DAL.ViewModels
         [StringLength(1000, ErrorMessage = "تعداد کاراکتر وارد شده صحیح نمی باشد")]
         public string Description { get; set; }
 
-        [Display(Name = "پاسخ")]
-        [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
-        [StringLength(350, ErrorMessage = "تعداد کاراکتر وارد شده صحیح نمی باشد")]
         public string? Answer { get; set; }
     }
 

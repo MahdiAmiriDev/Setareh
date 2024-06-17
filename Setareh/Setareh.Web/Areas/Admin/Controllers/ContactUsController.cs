@@ -19,14 +19,43 @@ namespace Setareh.Web.Areas.Admin.Controllers
             return View(model);
         }
 
+        [HttpGet]
         public async Task<IActionResult> Details(int id)
         {
-            var contactUs = await _contactUsService.GetByIdAsync(id);
+            var contactUs = await _contactUsService.GetInfoByIdAsync(id);
 
             if(contactUs == null)
                 return NotFound();
 
             return View(contactUs);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Details(ContactUsDetailViewModel model)
+        {
+            if(!ModelState.IsValid)
+                return View(model);
+
+            var result = await _contactUsService.AnswerAsync(model);
+
+            switch (result)
+            {
+                case AnswerResult.Success:
+                    TempData[SuccessMessage] = "پاسخ شما با موفقیت ثبت شد ";
+                    return RedirectToAction("List");                    
+                case AnswerResult.ContactUsNotFound:
+                    TempData[ErrorMessage] = " آبجکت موردنظر یافت نشد";
+                    return RedirectToAction("List");                    
+                case AnswerResult.Error:
+                    TempData[ErrorMessage] = "  بروز خطا در طول انجام عملیات";
+
+                    return RedirectToAction("List");
+                case AnswerResult.AnswerIsNull:
+                    TempData[ErrorMessage] = "متن پاسخ خالی است ";
+                    return RedirectToAction("List");
+            }
+
+            return View(model);
         }
     }
 }
