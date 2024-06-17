@@ -1,4 +1,5 @@
-﻿using Setareh.Bussines.Services.Interface;
+﻿using Resume.Bussines.Services.Interfaces;
+using Setareh.Bussines.Services.Interface;
 using Setareh.DAL.Entities.ContacUs;
 using Setareh.DAL.Repositories.Interface;
 using Setareh.DAL.ViewModels;
@@ -9,9 +10,13 @@ namespace Setareh.Bussines.Services.Implementation
     public class ContactUsService : IContactUsService
     {
         private readonly IContactUsRepository _contactUsRepository;
-        public ContactUsService(IContactUsRepository contactUsRepository)
+        private readonly IViewRenderService _viewRenderService;
+        private readonly IEmailService _emailService;
+        public ContactUsService(IContactUsRepository contactUsRepository, IViewRenderService viewRenderService, IEmailService emailService)
         {
             _contactUsRepository = contactUsRepository;
+            _viewRenderService = viewRenderService;
+            _emailService = emailService;
         }
 
         public async Task<CreateContactUsResult> CreateAsync(CreateContactUsViewModel model)
@@ -50,12 +55,16 @@ namespace Setareh.Bussines.Services.Implementation
             if (contactUs == null)
                 return AnswerResult.ContactUsNotFound;
 
-            if(string.IsNullOrEmpty(contactUs.Answer))
+            if (string.IsNullOrEmpty(contactUs.Answer))
                 return AnswerResult.AnswerIsNull;
 
             contactUs.Answer = model.Answer;
             _contactUsRepository.Update(contactUs);
             await _contactUsRepository.SaveAsync();
+
+            string body = await _viewRenderService.RenderToStringAsync("Emails/AnswerContactUs", model);
+            await _emailService.SendEmail(contactUs.Email, "پاسخ به تماس با ما", body);
+
             return AnswerResult.Success;
         }
 

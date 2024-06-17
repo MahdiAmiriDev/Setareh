@@ -256,3 +256,4 @@ E:\Projects\Setareh\Setareh\Setareh.Web\obj\Debug\net8.0\refint\Setareh.Web.dll
 E:\Projects\Setareh\Setareh\Setareh.Web\obj\Debug\net8.0\Setareh.Web.pdb
 E:\Projects\Setareh\Setareh\Setareh.Web\obj\Debug\net8.0\Setareh.Web.genruntimeconfig.cache
 E:\Projects\Setareh\Setareh\Setareh.Web\obj\Debug\net8.0\ref\Setareh.Web.dll
+E:\Projects\Setareh\Setareh\Setareh.Web\obj\Debug\net8.0\Setareh.Web.MvcApplicationPartsAssemblyInfo.cs

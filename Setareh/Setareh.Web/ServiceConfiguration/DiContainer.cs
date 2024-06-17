@@ -1,4 +1,7 @@
-﻿using Setareh.Bussines.Services.Implementation;
+﻿using Microsoft.AspNetCore.Identity.UI.Services;
+using Resume.Bussines.Services.Implementation;
+using Resume.Bussines.Services.Interfaces;
+using Setareh.Bussines.Services.Implementation;
 using Setareh.Bussines.Services.Interface;
 using Setareh.DAL.Repositories.Implementation;
 using Setareh.DAL.Repositories.Interface;
@@ -13,6 +16,7 @@ namespace Setareh.Web.ServiceConfiguration
 
             services.AddScoped<IUserRepository,UserRepository>();
             services.AddScoped<IContactUsRepository,ContactUsRepository>();
+            services.AddScoped<IAboutMeRepository,AboutMeRepository>();
 
             #endregion
 
@@ -21,6 +25,9 @@ namespace Setareh.Web.ServiceConfiguration
 
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IContactUsService, ContactUsService>();
+            services.AddScoped<IEmailService, EmailService>();
+            services.AddScoped<IViewRenderService, ViewRenderService>();
+            services.AddScoped<IAboutMeService, AboutMeService>();
 
             #endregion
         }
