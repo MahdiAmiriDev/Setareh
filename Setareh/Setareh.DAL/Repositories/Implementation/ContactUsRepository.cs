@@ -66,7 +66,24 @@ namespace Setareh.DAL.Repositories.Implementation
             return model;
         }
 
-        public async Task InsertAsync(ContactUs model)
+		public async Task<ContactUsDetailViewModel?> GetByIdAsync(int id)
+		{
+          return await _context.ContactUs
+                .Select(cu => new ContactUsDetailViewModel
+                {
+                    Answer = cu.Answer,
+                    CreateDate = cu.CreateDate,
+                    Id = cu.Id,
+                    Description = cu.Description,
+                    Email = cu.Email,
+                    FirstName = cu.FirstName,
+                    LastName = cu.LastName,
+                    Mobile = cu.Mobile,
+                    Title = cu.Title,
+                }).FirstOrDefaultAsync(x => x.Id == id);
+		}
+
+		public async Task InsertAsync(ContactUs model)
         {
             await _context.ContactUs.AddAsync(model);
         }

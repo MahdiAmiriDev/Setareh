@@ -22,6 +22,63 @@ namespace Setareh.DAL.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("Setareh.DAL.Entities.ContacUs.ContactUs", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Answer")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Mobile")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ContactUs");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Answer = "ندارد",
+                            CreateDate = new DateTime(2024, 6, 14, 23, 47, 1, 169, DateTimeKind.Local).AddTicks(1079),
+                            Description = "سلام عالی",
+                            Email = "mahdiamiridev@gmail.com",
+                            FirstName = "مهدی",
+                            LastName = "امیری",
+                            Mobile = "09337132998",
+                            Title = "تست"
+                        });
+                });
+
             modelBuilder.Entity("Setareh.DAL.Entities.User.User", b =>
                 {
                     b.Property<int>("Id")
@@ -64,13 +121,13 @@ namespace Setareh.DAL.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2024, 6, 14, 12, 38, 35, 253, DateTimeKind.Local).AddTicks(3220),
+                            CreateDate = new DateTime(2024, 6, 14, 23, 47, 1, 169, DateTimeKind.Local).AddTicks(955),
                             Email = "mahdiamiridev@gmail.com",
                             FirstName = "مهدی",
                             IsActive = true,
                             LastName = "امیری",
                             Mobile = "09337132998",
-                            Password = "2c216b1ba5e33a27eb6d3df7de7f8c36"
+                            Password = "2C-21-6B-1B-A5-E3-3A-27-EB-6D-3D-F7-DE-7F-8C-36"
                         });
                 });
 #pragma warning restore 612, 618

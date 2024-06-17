@@ -26,6 +26,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = E:\Projects\Setareh\Setareh\Setareh.Web
 build_property._RazorSourceGeneratorDebug = 
 
+[E:/Projects/Setareh/Setareh/Setareh.Web/Areas/Admin/Views/ContactUs/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29udGFjdFVzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [E:/Projects/Setareh/Setareh/Setareh.Web/Areas/Admin/Views/ContactUs/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29udGFjdFVzXExpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -84,6 +88,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [E:/Projects/Setareh/Setareh/Setareh.Web/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Projects/Setareh/Setareh/Setareh.Web/Views/ContactUs/ContactUs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFVzXENvbnRhY3RVcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [E:/Projects/Setareh/Setareh/Setareh.Web/Views/Home/Index.cshtml]

@@ -37,5 +37,10 @@ namespace Setareh.Bussines.Services.Implementation
         {
             return await _contactUsRepository.FilterAsync(model);
         }
-    }
+
+		public async Task<ContactUsDetailViewModel?> GetByIdAsync(int id)
+		{
+            return await _contactUsRepository.GetByIdAsync(id);
+		}
+	}
 }

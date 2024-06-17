@@ -14,5 +14,7 @@ namespace Setareh.Bussines.Services.Interface
 
         Task<FilterContactUsViewModel> FilterAsync(FilterContactUsViewModel model);
 
+        Task<ContactUsDetailViewModel?> GetByIdAsync(int id);
+
     }
 }

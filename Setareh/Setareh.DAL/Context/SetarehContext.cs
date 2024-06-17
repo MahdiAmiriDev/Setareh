@@ -19,15 +19,16 @@ namespace Setareh.DAL.Context
 
         #region DbSets
 
+        public DbSet<ContactUs> ContactUs { get; set; }
         public DbSet<User> User { get; set; }
 
-        public DbSet<ContactUs> ContactUs { get; set; }
+        
 
-		#endregion
+        #endregion
 
 
-		protected override void OnModelCreating(ModelBuilder modelBuilder)
-		{
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
 
             modelBuilder.Entity<User>()
                 .HasData(new User
@@ -39,11 +40,25 @@ namespace Setareh.DAL.Context
                     Id = 1,
                     IsActive = true,
                     Mobile = "09337132998",
-                    Password = "2c216b1ba5e33a27eb6d3df7de7f8c36"
+                    Password = "2C-21-6B-1B-A5-E3-3A-27-EB-6D-3D-F7-DE-7F-8C-36"
                 });
 
-			base.OnModelCreating(modelBuilder);
-		}
+            modelBuilder.Entity<ContactUs>()
+                .HasData(new ContactUs
+                {
+                    Answer = "ندارد",
+                    CreateDate = DateTime.Now,
+                    Description = "سلام عالی",
+                    Email = "mahdiamiridev@gmail.com",
+                    FirstName = "مهدی",
+                    Id = 1,
+                    LastName = "امیری",
+                    Mobile = "09337132998",
+                    Title = "تست"
+                });
 
-	}
+            base.OnModelCreating(modelBuilder);
+        }
+
+    }
 }
