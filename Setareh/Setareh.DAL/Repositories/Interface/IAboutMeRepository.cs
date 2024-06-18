@@ -13,5 +13,7 @@ namespace Setareh.DAL.Repositories.Interface
         Task SaveAsync();
 
         Task<AboutMe?> GetAsync();
+
+        Task<AboutMeViewModel?> GetClientSideInfoAsync();
     }
 }

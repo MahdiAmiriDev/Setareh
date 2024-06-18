@@ -28,9 +28,22 @@ namespace Setareh.Web.Areas.Admin.Controllers
             if (!ModelState.IsValid)
                 return View(model);
 
-             
+            var result = await _aboutMeService.UpdateAsync(model);
 
-            return View();
+            switch (result)
+            {
+                case AboutMeEditResult.Success:
+                    TempData[SuccessMessage] = "ویرایش با موفقیت انجام شد.";
+                    return RedirectToAction(nameof(Edit));
+                case AboutMeEditResult.Error:
+                    TempData[ErrorMessage] = "بروز خطا لطفا مجددا تلاش نمایید.";
+                    break;
+                case AboutMeEditResult.NotFound:
+                    TempData[ErrorMessage] = "ایتم موردنظر یافت نشد.";
+                    break;
+            }
+
+            return View(model);
         }
     }
 }

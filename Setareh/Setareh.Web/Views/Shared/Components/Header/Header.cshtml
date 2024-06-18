@@ -1,12 +1,15 @@
-﻿<!-- Header -->
+﻿@using Setareh.DAL.ViewModels
+@model AboutMeViewModel;
+
+<!-- Header -->
 <header class="header box">
     <div class="header__left">
         <div class="header__photo">
             <img class="header__photo-img" src="/Site/assets/img/main-photo.svg" alt="Ronald Robertson">
         </div>
         <div class="header__base-info">
-            <h4 class="title titl--h4">ملیکا خلیلیان</h4>
-            <div class="status">کارگردان خلاق</div>
+            <h4 class="title titl--h4">@Model.FirstName @Model.LastName</h4>
+            <div class="status">@Model.Position</div>
             <ul class="header__social">
                 <li><a href="https://www.facebook.com/"><i class="font-icon icon-facebook1"></i></a></li>
                 <li><a href="https://www.twitter.com/"><i class="font-icon icon-twitter1"></i></a></li>
@@ -16,12 +19,12 @@
     </div>
     <div class="header__right">
         <ul class="header__contact">
-            <li><span class="overhead">ایمیل</span>Melika.khaliliyan@gmail.com</li>
-            <li><span class="overhead">تلفن</span>09105552211</li>
+            <li><span class="overhead">ایمیل</span>@Model.Email</li>
+            <li><span class="overhead">تلفن</span>@Model.Mobile</li>
         </ul>
         <ul class="header__contact">
-            <li><span class="overhead">تولد</span>9 بهمن 1375</li>
-            <li><span class="overhead">مکان تولد</span>شاهرود ایران</li>
+            @* <li><span class="overhead">تاریخ تولد</span>9 بهمن 1375</li> *@
+            <li><span class="overhead">محل زندگی</span>@Model.Location</li>
         </ul>
     </div>
 </header>

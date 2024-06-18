@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Setareh.DAL.Context;
 
@@ -11,9 +12,11 @@ using Setareh.DAL.Context;
 namespace Setareh.DAL.Migrations
 {
     [DbContext(typeof(SetarehContext))]
-    partial class SetarehContextModelSnapshot : ModelSnapshot
+    [Migration("20240617165827_AddAboutMeTable")]
+    partial class AddAboutMeTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -61,21 +64,6 @@ namespace Setareh.DAL.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("AboutMe");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CreateDate = new DateTime(2024, 6, 17, 20, 34, 19, 221, DateTimeKind.Local).AddTicks(6162),
-                            Description = "",
-                            Email = "",
-                            FirstName = "",
-                            LastName = "",
-                            Location = "",
-                            Mobile = "",
-                            Position = "",
-                            birthDate = new DateOnly(2024, 6, 17)
-                        });
                 });
 
             modelBuilder.Entity("Setareh.DAL.Entities.ContacUs.ContactUs", b =>
@@ -125,7 +113,7 @@ namespace Setareh.DAL.Migrations
                         {
                             Id = 1,
                             Answer = "ندارد",
-                            CreateDate = new DateTime(2024, 6, 17, 20, 34, 19, 221, DateTimeKind.Local).AddTicks(6083),
+                            CreateDate = new DateTime(2024, 6, 17, 20, 28, 24, 856, DateTimeKind.Local).AddTicks(8508),
                             Description = "سلام عالی",
                             Email = "mahdiamiridev@gmail.com",
                             FirstName = "مهدی",
@@ -177,7 +165,7 @@ namespace Setareh.DAL.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2024, 6, 17, 20, 34, 19, 221, DateTimeKind.Local).AddTicks(5946),
+                            CreateDate = new DateTime(2024, 6, 17, 20, 28, 24, 856, DateTimeKind.Local).AddTicks(8374),
                             Email = "mahdiamiridev@gmail.com",
                             FirstName = "مهدی",
                             IsActive = true,

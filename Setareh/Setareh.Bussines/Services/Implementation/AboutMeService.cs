@@ -17,7 +17,6 @@ namespace Setareh.Bussines.Services.Implementation
         {
             _aboutMeRepository = aboutMeRepository;
         }
-
         public async Task<AboutMeEditModel?> GetInfoAsync()
         {
             return await _aboutMeRepository.GetInfoAsync();
@@ -32,16 +31,22 @@ namespace Setareh.Bussines.Services.Implementation
 
             aboutMe.FirstName = model.FirstName;
             aboutMe.LastName = model.LastName;
-            aboutMe.birthDate = model.birthDate;
+            aboutMe.birthDate = model.BirthDate;
             aboutMe.Mobile = model.Mobile;
             aboutMe.Email = model.Email;
             aboutMe.Location = model.Location;
             aboutMe.Position = model.Position;  
+            aboutMe.Description = model.Description;
 
             _aboutMeRepository.Update(aboutMe);
             await _aboutMeRepository.SaveAsync();
 
             return AboutMeEditResult.Success;
+        }
+
+        public async Task<AboutMeViewModel?> GetClientSideInfoAsync()
+        {
+            return await _aboutMeRepository.GetClientSideInfoAsync();
         }
     }
 }

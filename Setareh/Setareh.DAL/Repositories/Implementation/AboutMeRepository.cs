@@ -24,18 +24,35 @@ namespace Setareh.DAL.Repositories.Implementation
             return await _context.AboutMe.FirstOrDefaultAsync();
         }
 
-        public async Task<AboutMeEditModel?> GetInfoAsync()
+        public async Task<AboutMeViewModel?> GetClientSideInfoAsync()
         {
-            return await _context.AboutMe.Select(aboutMe => new AboutMeEditModel
+            return await _context.AboutMe.Select(aboutMe => new AboutMeViewModel
             {
-                birthDate = aboutMe.birthDate,
+                BirthDate = aboutMe.birthDate,
                 Email = aboutMe.Email,
                 FirstName = aboutMe.FirstName,
                 LastName = aboutMe.LastName,
                 Id = aboutMe.Id,
                 Location = aboutMe.Location,
                 Mobile = aboutMe.Mobile,
-                Position = aboutMe.Position
+                Position = aboutMe.Position,
+                Description = aboutMe.Description,
+            }).FirstOrDefaultAsync();
+        }
+
+        public async Task<AboutMeEditModel?> GetInfoAsync()
+        {
+            return await _context.AboutMe.Select(aboutMe => new AboutMeEditModel
+            {
+                BirthDate = aboutMe.birthDate,
+                Email = aboutMe.Email,
+                FirstName = aboutMe.FirstName,
+                LastName = aboutMe.LastName,
+                Id = aboutMe.Id,
+                Location = aboutMe.Location,
+                Mobile = aboutMe.Mobile,
+                Position = aboutMe.Position,
+                Description = aboutMe.Description,
             }).FirstOrDefaultAsync();
         }
 

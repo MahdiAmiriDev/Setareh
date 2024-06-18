@@ -13,5 +13,6 @@ namespace Setareh.DAL.Entities.AboutMe
         public string? Position { get; set; }
         public DateOnly? birthDate { get; set; }
         public string? Location { get; set; }
+        public string Description { get; set; }
     }
 }

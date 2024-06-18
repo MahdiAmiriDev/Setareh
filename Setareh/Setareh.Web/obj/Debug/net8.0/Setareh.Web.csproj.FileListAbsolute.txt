@@ -257,3 +257,13 @@ E:\Projects\Setareh\Setareh\Setareh.Web\obj\Debug\net8.0\Setareh.Web.pdb
 E:\Projects\Setareh\Setareh\Setareh.Web\obj\Debug\net8.0\Setareh.Web.genruntimeconfig.cache
 E:\Projects\Setareh\Setareh\Setareh.Web\obj\Debug\net8.0\ref\Setareh.Web.dll
 E:\Projects\Setareh\Setareh\Setareh.Web\obj\Debug\net8.0\Setareh.Web.MvcApplicationPartsAssemblyInfo.cs
+E:\Projects\Setareh\Setareh\Setareh.Web\bin\Debug\net8.0\System.Web.Mvc.dll
+E:\Projects\Setareh\Setareh\Setareh.Web\bin\Debug\net8.0\System.Web.Razor.dll
+E:\Projects\Setareh\Setareh\Setareh.Web\bin\Debug\net8.0\System.Web.Helpers.dll
+E:\Projects\Setareh\Setareh\Setareh.Web\bin\Debug\net8.0\System.Web.WebPages.Deployment.dll
+E:\Projects\Setareh\Setareh\Setareh.Web\bin\Debug\net8.0\System.Web.WebPages.Razor.dll
+E:\Projects\Setareh\Setareh\Setareh.Web\bin\Debug\net8.0\System.Web.WebPages.dll
+E:\Projects\Setareh\Setareh\Setareh.Web\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+E:\Projects\Setareh\Setareh\Setareh.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+E:\Projects\Setareh\Setareh\Setareh.Web\bin\Debug\net8.0\Microsoft.Web.Infrastructure.dll
+E:\Projects\Setareh\Setareh\Setareh.Web\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll

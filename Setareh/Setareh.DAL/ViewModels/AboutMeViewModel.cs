@@ -1,10 +1,13 @@
-﻿
-
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Setareh.DAL.ViewModels
 {
-    public class AboutMeEditModel
+    public class AboutMeViewModel
     {
         public int Id { get; set; }
         [Display(Name = "نام")]
@@ -35,14 +38,7 @@ namespace Setareh.DAL.ViewModels
         [StringLength(13, ErrorMessage = "تعداد کاراکتر وارد شده صحیح نمی باشد")]
         public string? Location { get; set; }
         [Display(Name = "توضیحات")]
-        [Required(ErrorMessage = "لطفا {0} را وارد کنید")]        
+        [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         public string Description { get; set; }
-    }
-
-    public enum AboutMeEditResult
-    {
-        Success,
-        Error,
-        NotFound
     }
 }

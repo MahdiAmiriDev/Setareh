@@ -6,13 +6,13 @@ using Setareh.DAL.Entities.User;
 
 namespace Setareh.DAL.Context
 {
-    public class SetarehContext:DbContext
+    public class SetarehContext : DbContext
     {
         #region Constractor
 
-        public SetarehContext(DbContextOptions<SetarehContext> options):base(options)
+        public SetarehContext(DbContextOptions<SetarehContext> options) : base(options)
         {
-            
+
         }
 
         #endregion
@@ -57,6 +57,21 @@ namespace Setareh.DAL.Context
                     Mobile = "09337132998",
                     Title = "تست"
                 });
+
+            modelBuilder.Entity<AboutMe>()
+    .HasData(new AboutMe
+    {
+        Description = "",
+        birthDate = DateOnly.FromDateTime(DateTime.Now),
+        CreateDate = DateTime.Now,
+        FirstName = "",
+        Email = "",
+        LastName = "",
+        Id = 1,
+        Location = "",
+        Mobile = "",
+        Position = ""
+    });
 
             base.OnModelCreating(modelBuilder);
         }

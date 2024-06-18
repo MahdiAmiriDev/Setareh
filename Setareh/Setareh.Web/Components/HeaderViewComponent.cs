@@ -1,20 +1,30 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Setareh.Bussines.Services.Interface;
 
 namespace Setareh.Web.Components
 {
 	public class HeaderViewComponent:ViewComponent
 	{
 		#region Feilds
-		#endregion
 
-		#region Ctor
-		#endregion
+		private readonly IAboutMeService _aboutMeService;
 
-		#region Methods
-		public async Task<IViewComponentResult> InvokeAsync()
+        public HeaderViewComponent(IAboutMeService aboutMeService)
+        {
+            _aboutMeService = aboutMeService;
+        }
+
+        #endregion
+
+        #region Ctor
+        #endregion
+
+        #region Methods
+        public async Task<IViewComponentResult> InvokeAsync()
 		{	
+            var model = await _aboutMeService.GetClientSideInfoAsync();
 
-			return View("Header");
+			return View("Header",model);
 		}
 
 		#endregion

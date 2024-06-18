@@ -11,6 +11,8 @@ namespace Setareh.Bussines.Services.Interface
     {
         Task<AboutMeEditModel?> GetInfoAsync();
 
+        Task<AboutMeViewModel?> GetClientSideInfoAsync();
+
         Task<AboutMeEditResult> UpdateAsync(AboutMeEditModel model);
     }
 }
