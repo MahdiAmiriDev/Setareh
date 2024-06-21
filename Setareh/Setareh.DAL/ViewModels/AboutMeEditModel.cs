@@ -1,5 +1,6 @@
 ﻿
 
+using Microsoft.AspNetCore.Http;
 using System.ComponentModel.DataAnnotations;
 
 namespace Setareh.DAL.ViewModels
@@ -37,6 +38,12 @@ namespace Setareh.DAL.ViewModels
         [Display(Name = "توضیحات")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]        
         public string Description { get; set; }
+
+        [Display(Name = "اسم تصویر")]
+        public string? ImageName { get; set; }
+
+        [Display(Name ="پروفایل")]
+        public IFormFile Avatar { get; set; }
     }
 
     public enum AboutMeEditResult

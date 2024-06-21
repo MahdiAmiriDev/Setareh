@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Setareh.Bussines.Services.Interface;
+﻿using Setareh.Bussines.Services.Interface;
+using Setareh.Bussines.Extensions;
 using Setareh.DAL.Repositories.Interface;
 using Setareh.DAL.ViewModels;
+using Resume.Bussines.Extensions;
+using Resume.Bussines.Tools;
 
 namespace Setareh.Bussines.Services.Implementation
 {
@@ -37,6 +35,14 @@ namespace Setareh.Bussines.Services.Implementation
             aboutMe.Location = model.Location;
             aboutMe.Position = model.Position;  
             aboutMe.Description = model.Description;
+
+            if(model.Avatar != null)
+            {
+                string imageName = Guid.NewGuid() + Path.GetExtension(model.Avatar.FileName);
+                model.Avatar.AddImageToServer(imageName,SiteTools.AboutMeAvatar);
+
+                aboutMe.ImageName = imageName;
+            }
 
             _aboutMeRepository.Update(aboutMe);
             await _aboutMeRepository.SaveAsync();

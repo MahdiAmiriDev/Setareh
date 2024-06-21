@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Mvc;
-using System.Diagnostics;
 
 namespace Setareh.Web.Controllers
 {
@@ -14,7 +13,7 @@ namespace Setareh.Web.Controllers
 
         public IActionResult Index()
         {            
-            return View();
+            return RedirectToAction("Index","AboutMe");
         }
     }
 }

@@ -14,5 +14,6 @@ namespace Setareh.DAL.Entities.AboutMe
         public DateOnly? birthDate { get; set; }
         public string? Location { get; set; }
         public string Description { get; set; }
+        public string ImageName { get; set; }
     }
 }

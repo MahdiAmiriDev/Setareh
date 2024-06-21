@@ -43,6 +43,10 @@ namespace Setareh.DAL.Migrations
                     b.Property<string>("FirstName")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("ImageName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("LastName")
                         .HasColumnType("nvarchar(max)");
 
@@ -66,15 +70,16 @@ namespace Setareh.DAL.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2024, 6, 17, 20, 34, 19, 221, DateTimeKind.Local).AddTicks(6162),
+                            CreateDate = new DateTime(2024, 6, 18, 23, 23, 22, 482, DateTimeKind.Local).AddTicks(9540),
                             Description = "",
                             Email = "",
                             FirstName = "",
+                            ImageName = "",
                             LastName = "",
                             Location = "",
                             Mobile = "",
                             Position = "",
-                            birthDate = new DateOnly(2024, 6, 17)
+                            birthDate = new DateOnly(2024, 6, 18)
                         });
                 });
 
@@ -125,7 +130,7 @@ namespace Setareh.DAL.Migrations
                         {
                             Id = 1,
                             Answer = "ندارد",
-                            CreateDate = new DateTime(2024, 6, 17, 20, 34, 19, 221, DateTimeKind.Local).AddTicks(6083),
+                            CreateDate = new DateTime(2024, 6, 18, 23, 23, 22, 482, DateTimeKind.Local).AddTicks(9503),
                             Description = "سلام عالی",
                             Email = "mahdiamiridev@gmail.com",
                             FirstName = "مهدی",
@@ -177,7 +182,7 @@ namespace Setareh.DAL.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2024, 6, 17, 20, 34, 19, 221, DateTimeKind.Local).AddTicks(5946),
+                            CreateDate = new DateTime(2024, 6, 18, 23, 23, 22, 482, DateTimeKind.Local).AddTicks(9367),
                             Email = "mahdiamiridev@gmail.com",
                             FirstName = "مهدی",
                             IsActive = true,

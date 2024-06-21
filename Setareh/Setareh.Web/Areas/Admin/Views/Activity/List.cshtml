@@ -1,0 +1,88 @@
+﻿@using Setareh.DAL.ViewModels
+@model FilterActivityViewModel
+
+
+@{
+    ViewData["Title"] = "لیست فعالیت های من";
+}
+
+
+
+<div class="row clearfix">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mb-4">
+        <div class="card">
+            <div class="header">
+                <h2>
+                    فیلتر ها
+                </h2>
+
+            </div>
+            <div class="body">
+                <form method="get" asp-action="List" id="filter-search">
+                    <input type="hidden" asp-for="Page" />
+                    <div class="row clearfix">
+                        <div class="col-sm-12 col-md-4">
+                            <div class="form-group form-float">
+                                <div class="form-line">
+                                    <input type="text" class="form-control" asp-for="Title">
+                                    <label class="form-label" asp-for="Title"></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <button class="btn btn-success">
+                                جستجو
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card">
+            <div class="header">
+                <h2>
+                    فیلتر ها
+                </h2>
+
+            </div>
+            <div class="body table-responsive">
+                @if (Model != null && Model.Entities != null && Model.Entities.Any())
+                {
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>شناسه</th>
+                                <th>عنوان</th>
+                                <th>تاریخ ایجاد</th>
+                                <th>عملیات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var activity in Model.Entities)
+                            {
+                                <tr>
+                                    <th scope="row">@activity.Id</th>
+                                    <td>@activity.Title</td>
+                                    <td>@activity.CreateDate</td>                                   
+                                    <td>@user.CreateDate</td>
+                                    <td>
+@*                                         <a asp-action="Details" class="text-warning" asp-route-id="@user.Id">
+                                            <i class="fa fa-pen"></i>
+                                        </a> *@
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                    <partial name="_AdminPaginationPartial" model="@Model.GetCurrentPaging()" />
+                }
+                else
+                {
+                    <partial name="_AdminNotFoundPartial"></partial>
+                }
+            </div>
+        </div>
+    </div>
+</div>

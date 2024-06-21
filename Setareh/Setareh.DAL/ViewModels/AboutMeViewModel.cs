@@ -40,5 +40,8 @@ namespace Setareh.DAL.ViewModels
         [Display(Name = "توضیحات")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         public string Description { get; set; }
+
+        [Display(Name ="اسم تصویر")]
+        public string ImageName { get; set; }
     }
 }

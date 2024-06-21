@@ -1,6 +1,7 @@
 ﻿
 using Microsoft.EntityFrameworkCore;
 using Setareh.DAL.Entities.AboutMe;
+using Setareh.DAL.Entities.Acitivity;
 using Setareh.DAL.Entities.ContacUs;
 using Setareh.DAL.Entities.User;
 
@@ -23,6 +24,7 @@ namespace Setareh.DAL.Context
         public DbSet<ContactUs> ContactUs { get; set; }
         public DbSet<User> User { get; set; }
         public DbSet<AboutMe> AboutMe { get; set; }
+        public DbSet<Activity> Activity { get; set; }
 
 
         #endregion
@@ -70,7 +72,8 @@ namespace Setareh.DAL.Context
         Id = 1,
         Location = "",
         Mobile = "",
-        Position = ""
+        Position = "",
+        ImageName = ""
     });
 
             base.OnModelCreating(modelBuilder);

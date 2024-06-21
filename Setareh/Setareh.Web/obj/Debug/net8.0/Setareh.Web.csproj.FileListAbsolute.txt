@@ -267,3 +267,4 @@ E:\Projects\Setareh\Setareh\Setareh.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Js
 E:\Projects\Setareh\Setareh\Setareh.Web\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
 E:\Projects\Setareh\Setareh\Setareh.Web\bin\Debug\net8.0\Microsoft.Web.Infrastructure.dll
 E:\Projects\Setareh\Setareh\Setareh.Web\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+E:\Projects\Setareh\Setareh\Setareh.Web\bin\Debug\net8.0\SixLabors.ImageSharp.dll
