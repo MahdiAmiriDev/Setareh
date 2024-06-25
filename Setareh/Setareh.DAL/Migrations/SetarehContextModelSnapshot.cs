@@ -70,7 +70,7 @@ namespace Setareh.DAL.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2024, 6, 21, 12, 44, 47, 167, DateTimeKind.Local).AddTicks(4064),
+                            CreateDate = new DateTime(2024, 6, 25, 18, 16, 44, 121, DateTimeKind.Local).AddTicks(7534),
                             Description = "",
                             Email = "",
                             FirstName = "",
@@ -79,7 +79,7 @@ namespace Setareh.DAL.Migrations
                             Location = "",
                             Mobile = "",
                             Position = "",
-                            birthDate = new DateOnly(2024, 6, 21)
+                            birthDate = new DateOnly(2024, 6, 25)
                         });
                 });
 
@@ -158,7 +158,7 @@ namespace Setareh.DAL.Migrations
                         {
                             Id = 1,
                             Answer = "ندارد",
-                            CreateDate = new DateTime(2024, 6, 21, 12, 44, 47, 167, DateTimeKind.Local).AddTicks(4015),
+                            CreateDate = new DateTime(2024, 6, 25, 18, 16, 44, 121, DateTimeKind.Local).AddTicks(7500),
                             Description = "سلام عالی",
                             Email = "mahdiamiridev@gmail.com",
                             FirstName = "مهدی",
@@ -196,6 +196,36 @@ namespace Setareh.DAL.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Education");
+                });
+
+            modelBuilder.Entity("Setareh.DAL.Entities.Expreince.Experience", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateOnly?>("End")
+                        .HasColumnType("date");
+
+                    b.Property<DateOnly>("Start")
+                        .HasColumnType("date");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Experience");
                 });
 
             modelBuilder.Entity("Setareh.DAL.Entities.User.User", b =>
@@ -240,7 +270,7 @@ namespace Setareh.DAL.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2024, 6, 21, 12, 44, 47, 167, DateTimeKind.Local).AddTicks(3616),
+                            CreateDate = new DateTime(2024, 6, 25, 18, 16, 44, 121, DateTimeKind.Local).AddTicks(7350),
                             Email = "mahdiamiridev@gmail.com",
                             FirstName = "مهدی",
                             IsActive = true,

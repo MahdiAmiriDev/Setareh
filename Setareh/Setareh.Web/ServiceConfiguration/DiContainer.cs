@@ -19,6 +19,7 @@ namespace Setareh.Web.ServiceConfiguration
             services.AddScoped<IAboutMeRepository,AboutMeRepository>();
 			services.AddScoped<IActivityRepository, ActivityRepository>();
 			services.AddScoped<IEducationRepository, EducationRepository>();
+			services.AddScoped<IExperienceRepository, ExperienceRepository>();
 
 			#endregion
 
@@ -32,6 +33,7 @@ namespace Setareh.Web.ServiceConfiguration
             services.AddScoped<IAboutMeService, AboutMeService>();
             services.AddScoped<IActivityService, ActivityService>();
             services.AddScoped<IEducationService, EducationService>();
+            services.AddScoped<IExperienceService, ExperienceService>();
 
             #endregion
         }

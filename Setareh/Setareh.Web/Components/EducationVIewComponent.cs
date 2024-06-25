@@ -3,10 +3,10 @@ using Setareh.Bussines.Services.Interface;
 
 namespace Setareh.Web.Components
 {
-	public class EducationVIewComponent: ViewComponent
+	public class EducationViewComponent: ViewComponent
 	{
 		private readonly IEducationService _educationService;
-		public EducationVIewComponent(IEducationService educationService)
+		public EducationViewComponent(IEducationService educationService)
 		{
 			_educationService = educationService;
 		}

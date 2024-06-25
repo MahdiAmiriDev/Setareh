@@ -2729,6 +2729,10 @@
       "PackagePath": "staticwebassets\\Site\\assets\\styles\\vendors\\swiper.min.css"
     },
     {
+      "Id": "E:\\Projects\\Setareh\\Setareh\\Setareh.Web\\wwwroot\\img\\AboutMe\\9fb9b12a-a659-4aa3-8db7-57970df3888c.JPG",
+      "PackagePath": "staticwebassets\\img\\AboutMe\\9fb9b12a-a659-4aa3-8db7-57970df3888c.JPG"
+    },
+    {
       "Id": "E:\\Projects\\Setareh\\Setareh\\Setareh.Web\\wwwroot\\img\\AboutMe\\e3d3e15c-7357-43c2-9f6d-0bf1842be089.jpg",
       "PackagePath": "staticwebassets\\img\\AboutMe\\e3d3e15c-7357-43c2-9f6d-0bf1842be089.jpg"
     },

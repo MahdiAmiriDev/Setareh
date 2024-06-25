@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "3LtA34Z2uX1XNiGHziCehzFjse/RQcGTtfQWwOIpr0o=",
+  "Hash": "911iGuWgqoFajqKzTg+32n0QmWKe4iC8ZkFR+zF2DtI=",
   "Source": "Setareh.Web",
   "BasePath": "_content/Setareh.Web",
   "Mode": "Default",
@@ -11092,6 +11092,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Admin\\assets\\js\\table.min.js"
+    },
+    {
+      "Identity": "E:\\Projects\\Setareh\\Setareh\\Setareh.Web\\wwwroot\\img\\AboutMe\\9fb9b12a-a659-4aa3-8db7-57970df3888c.JPG",
+      "SourceId": "Setareh.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Projects\\Setareh\\Setareh\\Setareh.Web\\wwwroot\\",
+      "BasePath": "_content/Setareh.Web",
+      "RelativePath": "img/AboutMe/9fb9b12a-a659-4aa3-8db7-57970df3888c.JPG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\AboutMe\\9fb9b12a-a659-4aa3-8db7-57970df3888c.JPG"
     },
     {
       "Identity": "E:\\Projects\\Setareh\\Setareh\\Setareh.Web\\wwwroot\\img\\AboutMe\\e3d3e15c-7357-43c2-9f6d-0bf1842be089.jpg",

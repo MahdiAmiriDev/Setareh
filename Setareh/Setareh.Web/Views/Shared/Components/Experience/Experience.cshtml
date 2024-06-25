@@ -1,0 +1,24 @@
+﻿@using Setareh.Bussines.Extensions
+@using Setareh.DAL.ViewModels
+@model FilterExperienceViewModel
+
+@if (Model != null && Model.Entities.Any())
+{
+    <div class="col-12">
+
+        <div class="timeline">
+
+            @foreach (var education in Model.Entities)
+            {
+                <!-- Item -->
+                <article class="timeline__item">
+                    <h5 class="title title--h5 timeline__title">@education.Title</h5>
+                    <span class="timeline__period">@education.Start.ToShamsi()-@(education.End.HasValue ? education.End.Value : "ادامه دارد")</span>
+                    <p class="timeline__description">@education.Description</p>
+                </article>
+            }
+
+        </div>
+    </div>
+}
+
