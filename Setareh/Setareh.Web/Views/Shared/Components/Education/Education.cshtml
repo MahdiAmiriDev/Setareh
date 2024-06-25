@@ -1,0 +1,26 @@
+﻿@using Setareh.Bussines.Extensions
+@using Setareh.DAL.ViewModels
+@model FilterEducationViewModel
+
+@if(Model !=null && Model.Entities.Any())
+{
+	<div class="col-12">
+		<h2 class="title title--h3"><img class="title-icon" src="/Site/assets/icons/icon-education.svg" alt=""> تحصیلات</h2>
+		<div class="timeline">
+
+			@foreach (var education in Model.Entities)
+			{
+				<article class="timeline__item">
+					<h5 class="title title--h5 timeline__title">@education.Title</h5>
+					<span class="timeline__period">
+						@education.Start.ToShamsi()-@(education.End.HasValue ? education.End.Value :"ادامه دارد")
+					</span>
+					<p class="timeline__description"> @education.Description</p>
+				</article>
+			}
+
+		</div>
+	</div>
+}
+
+

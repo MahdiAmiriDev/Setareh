@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Setareh.DAL.Context;
+using Setareh.DAL.Entities.Acitivity;
 using Setareh.DAL.Repositories.Interface;
 using Setareh.DAL.ViewModels;
 using System;
@@ -38,6 +39,49 @@ namespace Setareh.DAL.Repositories.Implementation
             }));
 
             return model;
+        }
+
+		public async Task<List<ActivityDetailViewModel>> GetAllActivites()
+		{
+            return await _context.Activity.Select(a => new ActivityDetailViewModel
+            {
+                CreateDate = a.CreateDate,
+                Description = a.Description,
+                Icon = a.Icon,
+                Title = a.Title,
+                Id = a.Id,
+            }).ToListAsync();
+		}
+
+		public async Task<Activity?> GetByIdAsync(int id)
+        {
+            return await _context.Activity.FirstOrDefaultAsync(x => x.Id == id);
+        }
+
+        public async Task<EditActivityViewModel?> GetInfoAsync(int id)
+        {
+            return await _context.Activity.Select(a => new EditActivityViewModel
+            {
+                Description = a.Description,
+                Id = a.Id,
+                Icon = a.Icon,
+                Title = a.Title                 
+            }).FirstOrDefaultAsync(a => a.Id == id);
+        }
+
+        public async Task InsertAsync(Activity activity)
+        {
+           await _context.Activity.AddAsync(activity);
+        }
+
+        public async Task SaveAsync()
+        {
+            await _context.SaveChangesAsync();
+        }
+
+        public void Update(Activity activity)
+        {
+            _context.Activity.Update(activity);
         }
     }
 }

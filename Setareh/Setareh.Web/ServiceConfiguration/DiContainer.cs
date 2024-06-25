@@ -17,17 +17,21 @@ namespace Setareh.Web.ServiceConfiguration
             services.AddScoped<IUserRepository,UserRepository>();
             services.AddScoped<IContactUsRepository,ContactUsRepository>();
             services.AddScoped<IAboutMeRepository,AboutMeRepository>();
+			services.AddScoped<IActivityRepository, ActivityRepository>();
+			services.AddScoped<IEducationRepository, EducationRepository>();
 
-            #endregion
+			#endregion
 
 
-            #region Services
+			#region Services
 
-            services.AddScoped<IUserService, UserService>();
+			services.AddScoped<IUserService, UserService>();
             services.AddScoped<IContactUsService, ContactUsService>();
             services.AddScoped<IEmailService, EmailService>();
             services.AddScoped<IViewRenderService, ViewRenderService>();
             services.AddScoped<IAboutMeService, AboutMeService>();
+            services.AddScoped<IActivityService, ActivityService>();
+            services.AddScoped<IEducationService, EducationService>();
 
             #endregion
         }

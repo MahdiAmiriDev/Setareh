@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Setareh.DAL.Entities.AboutMe;
 using Setareh.DAL.Entities.Acitivity;
 using Setareh.DAL.Entities.ContacUs;
+using Setareh.DAL.Entities.Education;
 using Setareh.DAL.Entities.User;
 
 namespace Setareh.DAL.Context
@@ -25,6 +26,7 @@ namespace Setareh.DAL.Context
         public DbSet<User> User { get; set; }
         public DbSet<AboutMe> AboutMe { get; set; }
         public DbSet<Activity> Activity { get; set; }
+        public DbSet<Education> Education { get; set; }
 
 
         #endregion

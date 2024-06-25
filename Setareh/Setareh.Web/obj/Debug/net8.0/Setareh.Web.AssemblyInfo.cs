@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Setareh.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9838a2001429a1b6c2a23773708fdf3cb4a67832")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+48ab667c122b72f3e04d2e654d1f17cfc5ad22bf")]
 [assembly: System.Reflection.AssemblyProductAttribute("Setareh.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Setareh.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

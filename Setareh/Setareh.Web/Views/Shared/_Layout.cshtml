@@ -8,7 +8,7 @@
     <partial name="_MetaTagsPartial"></partial>
 
     <partial name="_HeaderReferencesPartial"></partial>
-    @await RenderSectionAsync("styles",false)
+    @await RenderSectionAsync("styles", false)
 
 </head>
 <body>
@@ -45,6 +45,28 @@
 
     <partial name="_FooterReferencesPartial"></partial>
     @await RenderSectionAsync("scripts", false)
+
+    <script>
+
+        let url = window.location.pathname;
+
+        switch (url) {
+            case "/":
+                $('.nav__item a').removeClass('active');
+                $('#aboutme').addClass('active');
+                break;
+            case "/resume":
+                $('.nav__item a').removeClass('active');
+                $('#resume').addClass('active');
+                break;
+            case "/ContactUs":
+                $('.nav__item a').removeClass('active');
+                $('#contactus').addClass('active');
+                break;
+        }
+
+
+    </script>
 
 </body>
 </html>

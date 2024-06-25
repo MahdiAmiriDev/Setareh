@@ -70,7 +70,7 @@ namespace Setareh.DAL.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2024, 6, 18, 23, 23, 22, 482, DateTimeKind.Local).AddTicks(9540),
+                            CreateDate = new DateTime(2024, 6, 21, 12, 44, 47, 167, DateTimeKind.Local).AddTicks(4064),
                             Description = "",
                             Email = "",
                             FirstName = "",
@@ -79,8 +79,36 @@ namespace Setareh.DAL.Migrations
                             Location = "",
                             Mobile = "",
                             Position = "",
-                            birthDate = new DateOnly(2024, 6, 18)
+                            birthDate = new DateOnly(2024, 6, 21)
                         });
+                });
+
+            modelBuilder.Entity("Setareh.DAL.Entities.Acitivity.Activity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Icon")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Activity");
                 });
 
             modelBuilder.Entity("Setareh.DAL.Entities.ContacUs.ContactUs", b =>
@@ -130,7 +158,7 @@ namespace Setareh.DAL.Migrations
                         {
                             Id = 1,
                             Answer = "ندارد",
-                            CreateDate = new DateTime(2024, 6, 18, 23, 23, 22, 482, DateTimeKind.Local).AddTicks(9503),
+                            CreateDate = new DateTime(2024, 6, 21, 12, 44, 47, 167, DateTimeKind.Local).AddTicks(4015),
                             Description = "سلام عالی",
                             Email = "mahdiamiridev@gmail.com",
                             FirstName = "مهدی",
@@ -138,6 +166,36 @@ namespace Setareh.DAL.Migrations
                             Mobile = "09337132998",
                             Title = "تست"
                         });
+                });
+
+            modelBuilder.Entity("Setareh.DAL.Entities.Education.Education", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateOnly?>("End")
+                        .HasColumnType("date");
+
+                    b.Property<DateOnly>("Start")
+                        .HasColumnType("date");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Education");
                 });
 
             modelBuilder.Entity("Setareh.DAL.Entities.User.User", b =>
@@ -182,7 +240,7 @@ namespace Setareh.DAL.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2024, 6, 18, 23, 23, 22, 482, DateTimeKind.Local).AddTicks(9367),
+                            CreateDate = new DateTime(2024, 6, 21, 12, 44, 47, 167, DateTimeKind.Local).AddTicks(3616),
                             Email = "mahdiamiridev@gmail.com",
                             FirstName = "مهدی",
                             IsActive = true,

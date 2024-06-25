@@ -1,4 +1,5 @@
-﻿@using Setareh.DAL.ViewModels
+﻿@using Setareh.Bussines.Extensions
+@using Setareh.DAL.ViewModels
 @model FilterActivityViewModel
 
 
@@ -65,12 +66,11 @@
                                 <tr>
                                     <th scope="row">@activity.Id</th>
                                     <td>@activity.Title</td>
-                                    <td>@activity.CreateDate</td>                                   
-                                    <td>@user.CreateDate</td>
+                                    <td>@activity.CreateDate.ToShamsi()</td>                                    
                                     <td>
-@*                                         <a asp-action="Details" class="text-warning" asp-route-id="@user.Id">
+                                        <a asp-action="Update" class="text-warning" asp-route-id="@activity.Id">
                                             <i class="fa fa-pen"></i>
-                                        </a> *@
+                                        </a>
                                     </td>
                                 </tr>
                             }

@@ -35,7 +35,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class="active">
+                <li>
                     <a href="#" onClick="return false;" class="menu-toggle">
                         <i class="menu-icon ti-user"></i>
                         <span>مدیریت تماس با ما</span>
@@ -46,7 +46,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class="active">
+                <li>
                     <a href="#" onClick="return false;" class="menu-toggle">
                         <i class="menu-icon ti-user"></i>
                         <span>مدیریت درباره من</span>
@@ -54,6 +54,37 @@
                     <ul class="ml-menu">
                         <li class="active">
                             <a asp-action="Edit" asp-area="Admin" asp-controller="AboutMe">درباره ی من</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onClick="return false;" class="menu-toggle">
+                        <i class="menu-icon ti-user"></i>
+                        <span>مدیریت فعالیت های من</span>
+                    </a>
+                    <ul class="ml-menu">
+                        <li class="active">
+                            <a asp-action="List" asp-area="Admin" asp-controller="Activity">لیست فعالیت های من</a>
+                        </li>
+
+                        <li class="active">
+                            <a asp-action="Create" asp-area="Admin" asp-controller="Activity">ساخت جدید</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#" onClick="return false;" class="menu-toggle">
+                        <i class="menu-icon ti-user"></i>
+                        <span>مدیریت تحصیلات من</span>
+                    </a>
+                    <ul class="ml-menu">
+                        <li class="active">
+                            <a asp-action="List" asp-area="Admin" asp-controller="Education">لیست تحصیلات</a>
+                        </li>
+
+                        <li class="active">
+                            <a asp-action="Create" asp-area="Admin" asp-controller="Education"> افزودن تحصیلات</a>
                         </li>
                     </ul>
                 </li>

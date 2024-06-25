@@ -37,6 +37,7 @@ namespace Setareh.DAL.Repositories.Implementation
                 Mobile = aboutMe.Mobile,
                 Position = aboutMe.Position,
                 Description = aboutMe.Description,
+                ImageName = aboutMe.ImageName
             }).FirstOrDefaultAsync();
         }
 
