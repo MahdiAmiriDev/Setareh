@@ -1,6 +1,6 @@
 ﻿using Setareh.DAL.Entities.Education;
 using Setareh.DAL.Entities.Expreince;
-using Setareh.DAL.ViewModels;
+using Setareh.DAL.ViewModels.Experience;
 
 namespace Setareh.DAL.Repositories.Interface
 {

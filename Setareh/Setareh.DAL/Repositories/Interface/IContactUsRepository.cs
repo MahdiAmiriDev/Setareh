@@ -1,5 +1,5 @@
 ﻿using Setareh.DAL.Entities.ContacUs;
-using Setareh.DAL.ViewModels;
+using Setareh.DAL.ViewModels.ContactUs;
 using System;
 using System.Collections.Generic;
 using System.Linq;

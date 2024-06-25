@@ -56,9 +56,7 @@ namespace Setareh.Web.Controllers
 
                     TempData[SuccessMessage] = "خوش آمدید";
 
-                    return RedirectToAction("Index", "Home", new { area = "Admin" });
-
-                    break;
+                    return RedirectToAction("Index", "Home", new { area = "Admin" });                    
 
                 case LoginResult.Error:
                     ViewData[ErrorMessage] = "بروز خطا لطفا مچددا تلاس کنید";

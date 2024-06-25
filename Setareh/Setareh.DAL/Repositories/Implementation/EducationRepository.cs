@@ -2,7 +2,7 @@
 using Setareh.DAL.Context;
 using Setareh.DAL.Entities.Education;
 using Setareh.DAL.Repositories.Interface;
-using Setareh.DAL.ViewModels;
+using Setareh.DAL.ViewModels.Education;
 using System;
 using System.Collections.Generic;
 using System.Linq;

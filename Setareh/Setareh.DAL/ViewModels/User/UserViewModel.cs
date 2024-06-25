@@ -1,13 +1,13 @@
 ﻿using Setareh.DAL.Models.Common;
 using System.ComponentModel.DataAnnotations;
 
-namespace Setareh.DAL.ViewModels
+namespace Setareh.DAL.ViewModels.User
 {
     public class CreateUserModel
     {
-        [Display(Name ="ایمیل")]
-        [Required(ErrorMessage ="لطفا {0} را وارد کنید")]
-        [StringLength(350,ErrorMessage ="تعداد کاراکتر وارد شده صحیح نمی باشد")]
+        [Display(Name = "ایمیل")]
+        [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
+        [StringLength(350, ErrorMessage = "تعداد کاراکتر وارد شده صحیح نمی باشد")]
         public string Email { get; set; }
 
         [Display(Name = "نام خانوادگی")]
@@ -69,14 +69,14 @@ namespace Setareh.DAL.ViewModels
         public string Email { get; set; }
         public string Mobile { get; set; }
         public string FirstName { get; set; }
-        public string LastName { get; set; }      
+        public string LastName { get; set; }
         public bool IsActive { get; set; }
         public DateTime CreateDate { get; set; }
     }
 
-    public class UserFilterViewModel:BasePaging<UserDetailViewModel>
+    public class UserFilterViewModel : BasePaging<UserDetailViewModel>
     {
-        [Display(Name ="موبایل")]
+        [Display(Name = "موبایل")]
         public string? Mobile { get; set; }
         [Display(Name = "ایمیل")]
         public string? Email { get; set; }

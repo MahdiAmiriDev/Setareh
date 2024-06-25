@@ -4,7 +4,7 @@ using Setareh.Bussines.Services.Interface;
 using Setareh.DAL.Entities.Account;
 using Setareh.DAL.Entities.User;
 using Setareh.DAL.Repositories.Interface;
-using Setareh.DAL.ViewModels;
+using Setareh.DAL.ViewModels.User;
 
 namespace Setareh.Bussines.Services.Implementation
 {

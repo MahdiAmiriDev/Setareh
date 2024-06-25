@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Setareh.Bussines.Services.Interface;
+using Setareh.DAL.ViewModels.Education;
 
 namespace Setareh.Web.Components
 {
@@ -12,7 +13,7 @@ namespace Setareh.Web.Components
 		}
 		public async Task<IViewComponentResult> InvokeAsync()
 		{
-			var model = await _educationService.FilterAsync(new DAL.ViewModels.FilterEducationViewModel
+			var model = await _educationService.FilterAsync(new FilterEducationViewModel
 			{
 
 			});

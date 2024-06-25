@@ -1,8 +1,6 @@
-﻿
-
-namespace Setareh.DAL.ViewModels
+﻿namespace Setareh.DAL.ViewModels.Education
 {
-    public class ExperienceViewModel
+    public class EducationViewModel
     {
         public int Id { get; set; }
         public string Title { get; set; }

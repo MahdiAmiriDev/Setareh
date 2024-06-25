@@ -1,7 +1,7 @@
 ﻿
 
 using Setareh.DAL.Entities.User;
-using Setareh.DAL.ViewModels;
+using Setareh.DAL.ViewModels.User;
 
 namespace Setareh.DAL.Repositories.Interface
 {

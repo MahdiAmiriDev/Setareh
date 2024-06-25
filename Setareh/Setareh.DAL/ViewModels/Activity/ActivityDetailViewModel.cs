@@ -1,5 +1,4 @@
-﻿
-namespace Setareh.DAL.ViewModels
+﻿namespace Setareh.DAL.ViewModels.Activity
 {
     public class ActivityDetailViewModel
     {

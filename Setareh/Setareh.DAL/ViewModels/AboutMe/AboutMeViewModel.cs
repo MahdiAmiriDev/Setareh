@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Setareh.DAL.ViewModels
+namespace Setareh.DAL.ViewModels.AboutMe
 {
     public class AboutMeViewModel
     {
@@ -41,7 +41,7 @@ namespace Setareh.DAL.ViewModels
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         public string Description { get; set; }
 
-        [Display(Name ="اسم تصویر")]
+        [Display(Name = "اسم تصویر")]
         public string ImageName { get; set; }
     }
 }

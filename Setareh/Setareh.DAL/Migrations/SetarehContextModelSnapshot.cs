@@ -70,7 +70,7 @@ namespace Setareh.DAL.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2024, 6, 25, 18, 16, 44, 121, DateTimeKind.Local).AddTicks(7534),
+                            CreateDate = new DateTime(2024, 6, 25, 21, 7, 29, 82, DateTimeKind.Local).AddTicks(4975),
                             Description = "",
                             Email = "",
                             FirstName = "",
@@ -158,7 +158,7 @@ namespace Setareh.DAL.Migrations
                         {
                             Id = 1,
                             Answer = "ندارد",
-                            CreateDate = new DateTime(2024, 6, 25, 18, 16, 44, 121, DateTimeKind.Local).AddTicks(7500),
+                            CreateDate = new DateTime(2024, 6, 25, 21, 7, 29, 82, DateTimeKind.Local).AddTicks(4901),
                             Description = "سلام عالی",
                             Email = "mahdiamiridev@gmail.com",
                             FirstName = "مهدی",
@@ -270,7 +270,7 @@ namespace Setareh.DAL.Migrations
                         new
                         {
                             Id = 1,
-                            CreateDate = new DateTime(2024, 6, 25, 18, 16, 44, 121, DateTimeKind.Local).AddTicks(7350),
+                            CreateDate = new DateTime(2024, 6, 25, 21, 7, 29, 82, DateTimeKind.Local).AddTicks(4766),
                             Email = "mahdiamiridev@gmail.com",
                             FirstName = "مهدی",
                             IsActive = true,
@@ -278,6 +278,29 @@ namespace Setareh.DAL.Migrations
                             Mobile = "09337132998",
                             Password = "2C-21-6B-1B-A5-E3-3A-27-EB-6D-3D-F7-DE-7F-8C-36"
                         });
+                });
+
+            modelBuilder.Entity("Setareh.DAL.Entities.skill.Skill", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Percentage")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Skill");
                 });
 #pragma warning restore 612, 618
         }

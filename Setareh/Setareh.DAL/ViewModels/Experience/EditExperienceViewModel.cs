@@ -2,14 +2,14 @@
 using System.ComponentModel.DataAnnotations;
 
 
-namespace Setareh.DAL.ViewModels
+namespace Setareh.DAL.ViewModels.Experience
 {
-    public class EditEducationViewModel
+    public class EditExperienceViewModel
     {
         public int Id { get; set; }
 
         [Display(Name = "عنوان")]
-        [Required(ErrorMessage ="لطفا مقدار {0} را وارد کنید")]
+        [Required(ErrorMessage = "لطفا مقدار {0} را وارد کنید")]
         public string? Title { get; set; }
 
         [Display(Name = "تاریخ از")]
@@ -25,8 +25,8 @@ namespace Setareh.DAL.ViewModels
         public string Description { get; set; }
     }
 
-    public enum EditEducationResult
-    {    
+    public enum EditExperienceResult
+    {
         Success,
         Error,
         NotFound

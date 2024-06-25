@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 
 
-namespace Setareh.DAL.ViewModels
+namespace Setareh.DAL.ViewModels.ContactUs
 {
     public class ContactUsDetailViewModel
     {
@@ -14,8 +14,8 @@ namespace Setareh.DAL.ViewModels
         public string? LastName { get; set; }
         public string? Description { get; set; }
 
-        [Display(Name ="پاسخ")]
-        [Required(ErrorMessage ="لطفا مقدار {0} را وارد نمایید.")]
+        [Display(Name = "پاسخ")]
+        [Required(ErrorMessage = "لطفا مقدار {0} را وارد نمایید.")]
         public string? Answer { get; set; }
 
         public DateTime CreateDate { get; set; }

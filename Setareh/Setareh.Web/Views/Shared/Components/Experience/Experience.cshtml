@@ -1,11 +1,12 @@
 ﻿@using Setareh.Bussines.Extensions
-@using Setareh.DAL.ViewModels
+@using Setareh.DAL.ViewModels;
+@using Setareh.DAL.ViewModels.Experience;
 @model FilterExperienceViewModel
 
 @if (Model != null && Model.Entities.Any())
 {
     <div class="col-12">
-
+        <h2 class="title title--h3"><img class="title-icon" src="/Site/assets/icons/icon-experience.svg" alt=""> تجاربه های من</h2>
         <div class="timeline">
 
             @foreach (var education in Model.Entities)

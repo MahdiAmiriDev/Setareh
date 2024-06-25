@@ -5,6 +5,7 @@ using Setareh.DAL.Entities.Acitivity;
 using Setareh.DAL.Entities.ContacUs;
 using Setareh.DAL.Entities.Education;
 using Setareh.DAL.Entities.Expreince;
+using Setareh.DAL.Entities.skill;
 using Setareh.DAL.Entities.User;
 
 namespace Setareh.DAL.Context
@@ -29,6 +30,7 @@ namespace Setareh.DAL.Context
         public DbSet<Activity> Activity { get; set; }
         public DbSet<Education> Education { get; set; }
         public DbSet<Experience> Experience { get; set; }
+        public DbSet<Skill> Skill { get; set; }
 
 
         #endregion

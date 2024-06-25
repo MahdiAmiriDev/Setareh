@@ -5,12 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Setareh.DAL.ViewModels
+namespace Setareh.DAL.ViewModels.Experience
 {
-    public class CreateEducationViewModel
+    public class CreateExperienceViewModel
     {
         [Display(Name = "عنوان")]
-        [Required(ErrorMessage = "لطفا مقدار {0} را وارد کنید")]        
+        [Required(ErrorMessage = "لطفا مقدار {0} را وارد کنید")]
         public string Title { get; set; }
 
         [Display(Name = "تاریخ از")]
@@ -26,7 +26,7 @@ namespace Setareh.DAL.ViewModels
         public string Description { get; set; }
     }
 
-    public enum CreateEducationEnum
+    public enum CreateExperienceEnum
     {
         Success,
         Error

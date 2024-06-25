@@ -1,11 +1,11 @@
 ﻿using Setareh.Bussines.Services.Interface;
 using Setareh.DAL.Entities.Acitivity;
 using Setareh.DAL.Repositories.Interface;
-using Setareh.DAL.ViewModels;
+using Setareh.DAL.ViewModels.Activity;
 
 namespace Setareh.Bussines.Services.Implementation
 {
-	public class ActivityService : IActivityService
+    public class ActivityService : IActivityService
     {
         private readonly IActivityRepository _activityRepository;
         public ActivityService(IActivityRepository activityRepository)

@@ -2,7 +2,7 @@
 using Setareh.Bussines.Services.Interface;
 using Setareh.DAL.Entities.ContacUs;
 using Setareh.DAL.Repositories.Interface;
-using Setareh.DAL.ViewModels;
+using Setareh.DAL.ViewModels.ContactUs;
 using System.Runtime.CompilerServices;
 
 namespace Setareh.Bussines.Services.Implementation

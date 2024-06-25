@@ -6,11 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Setareh.DAL.ViewModels
+namespace Setareh.DAL.ViewModels.ContactUs
 {
     public class FilterContactUsViewModel : BasePaging<ContactUsDetailViewModel>
     {
-        [Display(Name ="عنوان")]
+        [Display(Name = "عنوان")]
         public string? Title { get; set; }
 
         [Display(Name = "ایمیل")]

@@ -7,11 +7,11 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Setareh.DAL.ViewModels
+namespace Setareh.DAL.ViewModels.Activity
 {
-    public class FilterActivityViewModel: BasePaging<ActivityDetailViewModel>
+    public class FilterActivityViewModel : BasePaging<ActivityDetailViewModel>
     {
-        [Display(Name ="عنوان")]
+        [Display(Name = "عنوان")]
         public string? Title { get; set; }
     }
 }

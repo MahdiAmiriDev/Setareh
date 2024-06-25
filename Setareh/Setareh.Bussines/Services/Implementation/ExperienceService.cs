@@ -1,7 +1,8 @@
 ﻿using Setareh.Bussines.Services.Interface;
 using Setareh.DAL.Entities.Expreince;
 using Setareh.DAL.Repositories.Interface;
-using Setareh.DAL.ViewModels;
+using Setareh.DAL.ViewModels.Activity;
+using Setareh.DAL.ViewModels.Experience;
 
 namespace Setareh.Bussines.Services.Implementation
 {

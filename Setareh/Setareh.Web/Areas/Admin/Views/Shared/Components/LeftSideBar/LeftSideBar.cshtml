@@ -1,4 +1,4 @@
-﻿@using Setareh.DAL.ViewModels
+﻿@using Setareh.DAL.ViewModels.User
 @{
     UserDetailViewModel user = ViewData["User"] as UserDetailViewModel ?? new UserDetailViewModel();
 }
@@ -100,6 +100,21 @@
 
                         <li class="active">
                             <a asp-action="Create" asp-area="Admin" asp-controller="Experience"> افزودن تجربه</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" onClick="return false;" class="menu-toggle">
+                        <i class="menu-icon ti-user"></i>
+                        <span>مدیریت مهارت های من</span>
+                    </a>
+                    <ul class="ml-menu">
+                        <li class="active">
+                            <a asp-action="List" asp-area="Admin" asp-controller="Skill">لیست مهارت ها</a>
+                        </li>
+
+                        <li class="active">
+                            <a asp-action="Create" asp-area="Admin" asp-controller="Skill"> افزودن مهارت</a>
                         </li>
                     </ul>
                 </li>

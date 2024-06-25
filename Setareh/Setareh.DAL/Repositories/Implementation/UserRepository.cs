@@ -4,7 +4,7 @@ using Setareh.DAL.Entities.User;
 using Setareh.DAL.Repositories.Interface;
 using Setareh.DAL.Context;
 using Microsoft.EntityFrameworkCore;
-using Setareh.DAL.ViewModels;
+using Setareh.DAL.ViewModels.User;
 
 namespace Setareh.DAL.Repositories.Implementation
 {

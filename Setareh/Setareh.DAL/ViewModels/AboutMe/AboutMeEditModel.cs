@@ -3,7 +3,7 @@
 using Microsoft.AspNetCore.Http;
 using System.ComponentModel.DataAnnotations;
 
-namespace Setareh.DAL.ViewModels
+namespace Setareh.DAL.ViewModels.AboutMe
 {
     public class AboutMeEditModel
     {
@@ -36,13 +36,13 @@ namespace Setareh.DAL.ViewModels
         [StringLength(13, ErrorMessage = "تعداد کاراکتر وارد شده صحیح نمی باشد")]
         public string? Location { get; set; }
         [Display(Name = "توضیحات")]
-        [Required(ErrorMessage = "لطفا {0} را وارد کنید")]        
+        [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         public string Description { get; set; }
 
         [Display(Name = "اسم تصویر")]
         public string? ImageName { get; set; }
 
-        [Display(Name ="پروفایل")]
+        [Display(Name = "پروفایل")]
         public IFormFile Avatar { get; set; }
     }
 

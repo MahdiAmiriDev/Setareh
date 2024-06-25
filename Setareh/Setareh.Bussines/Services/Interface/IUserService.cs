@@ -1,6 +1,6 @@
 ﻿using Setareh.DAL.Entities.Account;
 using Setareh.DAL.Entities.User;
-using Setareh.DAL.ViewModels;
+using Setareh.DAL.ViewModels.User;
 
 namespace Setareh.Bussines.Services.Interface
 {

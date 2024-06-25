@@ -1,5 +1,5 @@
 ﻿using Setareh.DAL.Entities.AboutMe;
-using Setareh.DAL.ViewModels;
+using Setareh.DAL.ViewModels.AboutMe;
 
 
 namespace Setareh.DAL.Repositories.Interface

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Setareh.DAL.ViewModels
+namespace Setareh.DAL.ViewModels.ContactUs
 {
     public class CreateContactUsViewModel
     {

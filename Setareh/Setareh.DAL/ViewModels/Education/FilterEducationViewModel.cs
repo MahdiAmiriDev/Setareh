@@ -2,11 +2,11 @@
 using System.ComponentModel.DataAnnotations;
 
 
-namespace Setareh.DAL.ViewModels
+namespace Setareh.DAL.ViewModels.Education
 {
-    public class FilterExperienceViewModel : BasePaging<ExperienceViewModel>
+    public class FilterEducationViewModel : BasePaging<EducationViewModel>
     {
-        [Display(Name ="عنوان")]
+        [Display(Name = "عنوان")]
         public string? Title { get; set; }
 
         [Display(Name = "تاریخ از")]

@@ -1,7 +1,8 @@
 ﻿using Setareh.Bussines.Services.Interface;
 using Setareh.DAL.Entities.Education;
 using Setareh.DAL.Repositories.Interface;
-using Setareh.DAL.ViewModels;
+using Setareh.DAL.ViewModels.Activity;
+using Setareh.DAL.ViewModels.Education;
 
 namespace Setareh.Bussines.Services.Implementation
 {

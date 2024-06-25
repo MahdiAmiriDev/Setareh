@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Setareh.Bussines.Services.Implementation;
 using Setareh.Bussines.Services.Interface;
-using Setareh.DAL.ViewModels;
+using Setareh.DAL.ViewModels.ContactUs;
 
 namespace Setareh.Web.Controllers
 {

@@ -1,4 +1,5 @@
-﻿using Setareh.DAL.ViewModels;
+﻿using Setareh.DAL.ViewModels.Activity;
+using Setareh.DAL.ViewModels.Education;
 
 
 namespace Setareh.Bussines.Services.Interface

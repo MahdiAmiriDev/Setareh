@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Setareh.Bussines.Services.Interface;
-using Setareh.DAL.ViewModels;
+using Setareh.DAL.ViewModels.Activity;
+using Setareh.DAL.ViewModels.Experience;
 
 namespace Setareh.Web.Areas.Admin.Controllers
 {

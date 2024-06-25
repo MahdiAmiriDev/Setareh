@@ -1,9 +1,9 @@
 ﻿using Setareh.Bussines.Services.Interface;
 using Setareh.Bussines.Extensions;
 using Setareh.DAL.Repositories.Interface;
-using Setareh.DAL.ViewModels;
 using Resume.Bussines.Extensions;
 using Resume.Bussines.Tools;
+using Setareh.DAL.ViewModels.AboutMe;
 
 namespace Setareh.Bussines.Services.Implementation
 {

@@ -1,4 +1,4 @@
-﻿using Setareh.DAL.ViewModels;
+﻿using Setareh.DAL.ViewModels.Activity;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -1,5 +1,5 @@
 ﻿using Setareh.DAL.Entities.Acitivity;
-using Setareh.DAL.ViewModels;
+using Setareh.DAL.ViewModels.Activity;
 
 namespace Setareh.DAL.Repositories.Interface
 {

@@ -1,16 +1,17 @@
-﻿
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-
-namespace Setareh.DAL.ViewModels
+namespace Setareh.DAL.ViewModels.Education
 {
-    public class EditExperienceViewModel
+    public class CreateEducationViewModel
     {
-        public int Id { get; set; }
-
         [Display(Name = "عنوان")]
-        [Required(ErrorMessage ="لطفا مقدار {0} را وارد کنید")]
-        public string? Title { get; set; }
+        [Required(ErrorMessage = "لطفا مقدار {0} را وارد کنید")]
+        public string Title { get; set; }
 
         [Display(Name = "تاریخ از")]
         [Required(ErrorMessage = "لطفا مقدار {0} را وارد کنید")]
@@ -25,10 +26,9 @@ namespace Setareh.DAL.ViewModels
         public string Description { get; set; }
     }
 
-    public enum EditExperienceResult
-    {    
+    public enum CreateEducationEnum
+    {
         Success,
-        Error,
-        NotFound
+        Error
     }
 }

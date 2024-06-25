@@ -1,0 +1,20 @@
+﻿@using Setareh.DAL.ViewModels.Skill;
+@model List<SkillDetailViewModel>
+
+<div class="row">
+    <div class="col-12">
+        <h2 class="title title--h3">مهارت های من</h2>
+        <div class="box box__border">
+            <!-- Progress -->
+            @foreach (var skill in Model)
+            {
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="@skill.Percentage" aria-valuemin="0" aria-valuemax="100" style="width: @skill.Percentage%; z-index: 2;">
+                        <div class="progress-text"><span>@skill.Title</span><span>@skill.Percentage%</span></div>
+                    </div>
+                    <div class="progress-text"><span>@skill.Title</span></div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

@@ -2,7 +2,7 @@
 using Setareh.DAL.Context;
 using Setareh.DAL.Entities.Expreince;
 using Setareh.DAL.Repositories.Interface;
-using Setareh.DAL.ViewModels;
+using Setareh.DAL.ViewModels.Experience;
 
 namespace Setareh.DAL.Repositories.Implementation
 {
